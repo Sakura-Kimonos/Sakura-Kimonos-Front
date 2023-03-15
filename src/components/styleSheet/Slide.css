@@ -1,4 +1,4 @@
-/* .slide{
+.slide{
     display: flex;
     justify-content: center;
 }
@@ -13,4 +13,4 @@
     .slide{
         margin-top: 0;
     }
-  } */
+  }
