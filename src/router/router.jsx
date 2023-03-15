@@ -20,9 +20,7 @@ export const router = createBrowserRouter([
         path: '/',
         // element: < Root/>,
         // errorElement: <NotFound />, 
-        children: [
-            {
-                // errorElement: <NotFound />,
+      
                 children: [
                     {
                         index: true,
@@ -76,8 +74,8 @@ export const router = createBrowserRouter([
                 ]
             },
          
-        ]
-    },   
+    //     ]
+    // },   
 ]);
 
 // async function loaderPost  ({ params })  {
