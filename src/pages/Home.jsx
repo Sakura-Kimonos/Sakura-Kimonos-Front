@@ -7,7 +7,7 @@ const Home = () => {
     // const {products}  = useLoaderData();
     return (
 <>
-<section class="container-fluid">
+<section className="container-fluid">
                 <Navbar/>
                 <Slide/>
                 <h2 className="title">LAST PRODUCTS</h2>
