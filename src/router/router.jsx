@@ -6,8 +6,8 @@ import Home from '../pages/Home';
 // import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
-import CardsUser from "../components/CardsUser";
-import CardAdm from "../components/CardAdm";
+import UserDashboard from "../pages/UserDashboard";
+import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 
 
@@ -48,13 +48,13 @@ export const router = createBrowserRouter([
                     //     // loader: loaderPost
                     // },
                     {
-                        path: '/advertisement',
-                        element: <CardsUser />,
+                        path: '/userDashboard',
+                        element: <UserDashboard />,
                         loader: loaderAdvertisement,
                     },   
                     {
-                        path: '/dashboard',
-                        element: <CardAdm />,
+                        path: '/admDashboard',
+                        element: <AdmDashboard />,
                         loader: loaderAdvertisement,
                     },  
                     // {

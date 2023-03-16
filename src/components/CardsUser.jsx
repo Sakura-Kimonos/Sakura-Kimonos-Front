@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import {BsSearchHeart, BsCart3} from 'react-icons/bs';
+import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 
 function CardsUser() {
   return (

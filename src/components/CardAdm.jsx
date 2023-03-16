@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import {BsSearchHeart, BsPencilSquare, BsTrash } from 'react-icons/bs';
+import {BsSearchHeart, BsPencilSquare, BsTrash } from 'react-icons/bs';
 
 function CardAdm() {
   return (
