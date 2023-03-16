@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
-import "./Navbar.css"
+import { NavLink } from 'react-router-dom'
+import "../components/styleSheet/Navbar.css"
 import Logo from '../image/Logo2.png';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
