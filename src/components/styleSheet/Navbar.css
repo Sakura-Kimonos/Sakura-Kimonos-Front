@@ -1,0 +1,23 @@
+.Logo{
+    width: 15vw !important;
+      
+  }
+  
+  .navigation{
+    background-color: #CB5F5F !important;
+    
+    
+  }
+  
+  .text-navbar{
+    color: #FFFFFF !important;
+    margin-inline-start: .3125rem;
+    margin-left: 20vh;
+    text-decoration: none;
+  }
+  
+  #responsive-navbar-nav{
+    color: #FFFFFF !important;
+    
+  }
+  
