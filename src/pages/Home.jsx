@@ -7,12 +7,14 @@ const Home = () => {
     // const {products}  = useLoaderData();
     return (
 <>
+<section class="container-fluid">
                 <Navbar/>
                 <Slide/>
-                <h2 className="title">Latest Advertisement</h2>
+                <h2 className="title">LAST PRODUCTS</h2>
             <div className="anuncios">
                 {/* <Trending products={products}/> */}
             </div>
+            </section>
                 </>
     )
 };
