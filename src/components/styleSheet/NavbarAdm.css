@@ -6,25 +6,21 @@
   .navigation{
     background-color: #CB5F5F !important;
     width: 100vw;
-  
-  }
+    height: 10%;
+    
+}
   
   .text-navbar{
     color: #FFFFFF !important;
     margin-inline-start: .3125rem;
     margin-left: 20vh;
     text-decoration: none;
-    font-size: x-large;
-
-  }
-
-  .text-navbar:hover {
-    color: #85BBA8 !important;
-    box-shadow:  2px #FFFFFF;
-  }
-
+    margin-top: 10%;
+    font-size: large;
+}
+  
+  
   #responsive-navbar-nav{
     color: #FFFFFF !important;
     
-  }
-  
+}
