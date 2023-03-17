@@ -2,6 +2,8 @@ import React from "react";
 import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
 // import ReactDOM from "React Router DOM";
 
+
+
 export default function Footer() {
     return (
         
