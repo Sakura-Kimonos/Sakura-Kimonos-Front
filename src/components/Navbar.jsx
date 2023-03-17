@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import "../components/styleSheet/Navbar.css"
-import Logo from '../assets/LogoSakura.png';
+import Logo from '../assets/LogoSakura1.png';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
