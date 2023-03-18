@@ -31,22 +31,22 @@ export const router = createBrowserRouter([
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,
-                    //     // loader: loaderPost,
+                    //     // loader: loaderCardUser,
                     // }, 
                     // {
                     //     path: '/addProduct',
                     //     element: <AddProduct />,
-                    //     // loader: loaderPost
+                    //     // loader: loaderCardUser
                     // }, 
                     // {
                     //     path: '/join',
                     //     element: <Join />,
-                    //     // loader: loaderPost
+                    //     // loader: loaderCardUser
                     // },
                     // {
                     //     path: '/login',
                     //     element: <Login />,
-                    //     // loader: loaderPost
+                    //     // loader: loaderCardUser
                     // },
                     {
                         path: '/userDashboard',
@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
                     // {
                     //     path: "advertisement/editProduct/:id",
                     //     element: <EditProduct />,
-                    //     loader: loaderPost, 
+                    //     loader: loaderCardUser, 
                     // },
                         
                     // {
@@ -84,12 +84,12 @@ export const router = createBrowserRouter([
     // },   
 ]);
 
-// async function loaderPost  ({ params })  {
-//     const post = await productHandler.loadProduct(params.id)  
-//     return { post };
+async function loaderCardUser  ({ params })  {
+    const CardUser = await productHandler.loadProduct(params.id)  
+    return { CardUser };
 
-//     //cambiar post por modal
-// };
+  
+};
 
 async function loaderAdvertisement () {
  const products = await productHandler.loadProducts()
