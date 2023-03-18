@@ -6,9 +6,10 @@ import Home from '../pages/Home';
 // import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
-// import CardsUser from "../pages/CardsUser";
-// import CardAdm from "../pages/CardAdm";
+import UserDashboard from "../pages/UserDashboard";
+import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
+// import CookiesPolicy from "../components/CookiesPolicy";
 
 
 // import EditProduct from "../pages/EditProduct"
@@ -47,16 +48,16 @@ export const router = createBrowserRouter([
                     //     element: <Login />,
                     //     // loader: loaderPost
                     // },
-                    // {
-                    //     path: '/advertisement',
-                    //     element: <CardsUser />,
-                    //     loader: loaderAdvertisement,
-                    // },   
-                    // {
-                    //     path: '/dashboard',
-                    //     element: <CardAdm />,
-                    //     loader: loaderAdvertisement,
-                    // },  
+                    {
+                        path: '/userDashboard',
+                        element: <UserDashboard />,
+                        loader: loaderAdvertisement,
+                    },   
+                    {
+                        path: '/admDashboard',
+                        element: <AdmDashboard />,
+                        loader: loaderAdvertisement,
+                    },  
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,
@@ -69,7 +70,12 @@ export const router = createBrowserRouter([
                     //     element: <EditProduct />,
                     //     loader: loaderPost, 
                     // },
-                    
+                        
+                    // {
+                    //     path: '/CookiesPolicy',
+                    //     element:<CookiesPolicy/>
+                        
+                    //  },
                 
                 ]
             },
