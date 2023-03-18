@@ -23,7 +23,7 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item className='slide'>
+      <Carousel.Item className='position'>
         <img
           className="d-block w-100"
           src={slide2}
@@ -31,7 +31,7 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item className='slide'> 
+      <Carousel.Item className='position'> 
         <img
           className="d-block w-100"
           src={slide3}
@@ -39,11 +39,11 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item className='slide'>
+      <Carousel.Item className='position'>
         <img
           className="d-block w-100"
           src={slide4}
-          alt="Third slide"
+          alt="Fourth slide"
     
         />
       </Carousel.Item>

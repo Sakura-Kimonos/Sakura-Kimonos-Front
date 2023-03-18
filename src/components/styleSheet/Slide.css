@@ -1,9 +1,19 @@
+.carousel {
+    height: auto;
+  }
+
 .slide{
     display: flex;
     justify-content: center;
     margin-top: 9%;
     margin-bottom: 1%;
 }
+.position {
+    margin-top: 9%;
+    margin-bottom: 1%;
+}
+
+
 
 @media (max-width: 414px) {
     .slide{
