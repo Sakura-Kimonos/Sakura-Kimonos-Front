@@ -1,0 +1,31 @@
+.section-text{
+    color: #169D8D;
+    font-weight: bold;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+  
+
+.section-title{
+    font-size: 2rem;
+    padding: 15px 0;
+    color: #FF7171;
+    font-weight: bold;
+  
+}
+
+.about-ous {
+    height: 350px;
+    background-image: url(../styleSheet/backgroundVision.png);
+    background-size: cover;
+}
+
+.about-ous .box {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.7);
+  
+}

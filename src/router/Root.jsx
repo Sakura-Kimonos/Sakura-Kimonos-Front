@@ -4,7 +4,7 @@
 // function Root() {
 //     return (
 //         <>
-//             {/* <Navbar /> */}
+//             <Navbar />
 //             <Outlet />
 //             <Footer />
 //         </>

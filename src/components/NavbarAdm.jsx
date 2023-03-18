@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import "../components/styleSheet/Navbar.css"
+import "../components/styleSheet/NavbarAdm.css"
 import Logo from '../assets/LogoSakura1.png';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,8 +10,8 @@ import {BsFillCartFill} from "react-icons/bs";
 function Navigation() {
 return (
 
-    <Navbar bg="light"  expand="lg" className='navigation fixed-top' >
-        <Container className='menu ' content fluid>
+    <Navbar bg="light"  expand="lg" className='navigation fixed-top'>
+        <Container className='menu' content fluid >
         <Navbar.Brand to="/">
             <NavLink to="/"className="navbar-home"><img src={Logo} alt="Sakura-Kimonos"className='Logo'/></NavLink>
         </Navbar.Brand>  
@@ -22,15 +22,15 @@ return (
                 
                 <NavLink className='text-navbar' to="/form" href="#Post">PRODUCTS</NavLink>
                 
-                <NavLink className='text-navbar' to="/join" href="#form">JOIN</NavLink>
+                <NavLink className='text-navbar' to="/advertisement" href="#form">PROFILE</NavLink>
                 
-                <NavLink className='text-navbar' to="/login" href="#form">LOGIN</NavLink>   
+                <NavLink className='text-navbar' to="/advertisement" href="#form">LOGIN</NavLink>   
 
-                <NavLink className='text-navbar' to="/ShoppingCart " href="#form"><BsFillCartFill/></NavLink>             
+                <NavLink className='text-navbar' to="/advertisement" href="#form"><BsFillCartFill/></NavLink>             
             </Nav>
         </Navbar.Collapse>
         </Container>
-    </Navbar>
+        </Navbar>
     
     
 ); 

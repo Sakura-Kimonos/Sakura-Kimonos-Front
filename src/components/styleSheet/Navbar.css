@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 /* .Logo{
+=======
+.Logo{
+>>>>>>> aaad1da390986a3178155adfc784c992014bc50b
     width: 15vw !important;
       
   }
   
   .navigation{
     background-color: #CB5F5F !important;
+<<<<<<< HEAD
     
     
+=======
+    width: 100vw;
+  
+>>>>>>> aaad1da390986a3178155adfc784c992014bc50b
   }
   
   .text-navbar{
@@ -14,10 +23,31 @@
     margin-inline-start: .3125rem;
     margin-left: 20vh;
     text-decoration: none;
+<<<<<<< HEAD
   }
   
+=======
+    font-size: x-large;
+
+  }
+
+  .text-navbar:hover {
+    color: #85BBA8 !important;
+    box-shadow:  2px #FFFFFF;
+  }
+
+>>>>>>> aaad1da390986a3178155adfc784c992014bc50b
   #responsive-navbar-nav{
     color: #FFFFFF !important;
     
   }
+<<<<<<< HEAD
    */
+=======
+
+  .menu {
+    margin-left: 10%;
+  }
+  
+
+>>>>>>> aaad1da390986a3178155adfc784c992014bc50b
