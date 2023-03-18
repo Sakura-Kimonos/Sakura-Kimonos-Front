@@ -1,6 +1,7 @@
 import "./styleSheetPages/Home.css"
 import Slide from '../components/Slide';
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 // import {  useLoaderData } from 'react-router-dom'
 // import Trending from "../components/Trending";
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <div className="anuncios">
                 {/* <Trending products={products}/> */}
             </div>
+            <Footer/>
             </section>
                 </>
     )

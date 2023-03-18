@@ -1,5 +1,8 @@
 import React from "react";
 import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 // import ReactDOM from "React Router DOM";
 
 
@@ -7,7 +10,7 @@ import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit
 export default function Footer() {
     return (
         
-      <MDBFooter  className='small fixed-bottom text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F" }}  >
+      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F" }}  >
         <section  size="sm"className='small text-sm text-white d-flex justify-content-center justify-content-lg-between p-4 border-bottom' id="Footer">
           <div className='text-sm  me-5 d-none d-lg-block'>
             <span>Get connected with us on social networks:</span>           
