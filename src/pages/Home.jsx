@@ -13,6 +13,7 @@ const Home = () => {
 <>
 <section className="hero">
                 <Navbar/>
+            
                 <Slide/>
                 <h2 className="title">LAST PRODUCTS</h2>
             <div className="anuncios">
