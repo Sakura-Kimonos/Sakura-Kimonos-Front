@@ -18,6 +18,7 @@
     height: 350px;
     background-image: url(../styleSheet/backgroundVision.png);
     background-size: cover;
+    margin-bottom: 5%;
 }
 
 .about-ous .box {
