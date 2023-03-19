@@ -3,6 +3,13 @@
       
   }
   
+  .menu {
+    margin-left: 10%;
+    background-color: #CB5F5F
+    
+  }
+  
+
   .navigation{
     background-color: #CB5F5F !important;
     width: 100vw;
@@ -27,9 +34,4 @@
     color: #FFFFFF !important;
     
   }
-
-  .menu {
-    margin-left: 10%;
-  }
-  
 
