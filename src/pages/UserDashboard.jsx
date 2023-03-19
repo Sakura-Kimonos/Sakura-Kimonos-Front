@@ -1,11 +1,11 @@
 import React,{ useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {  useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
+import '../pages/styleSheetPages/UserDashboard.css'
 
 
 
@@ -30,13 +30,15 @@ function Dashboard() {
 
   return (
     <div className="container-gn" id="text">
-      <h1>Welcome to your Dahsboard Sakura Kimonos</h1>
+       <br />
+      <h1> Sakura Kimonos</h1>
+    
     <>
       <div className="container-bar">
         <input
           className="searchStyle"
           type="text"
-          placeholder="🔍 Search by product or price"
+          placeholder="🔍 Search by product name or price"
           value={searchQuery}
           onChange={handleSearchChange}
         />
@@ -50,9 +52,9 @@ function Dashboard() {
                      <Card.Title>{product.title} </Card.Title>
                      <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
                      {/* <Card.Text>
-            //           Some quick example text to build on the card title and make up the
-            //           bulk of the card's content.
-            //         </Card.Text> */}
+                  Some quick example text to build on the card title and make up the
+               bulk of the card's content.
+                  </Card.Text> */}
                    <Button variant="light"><BsSearchHeart/> View </Button>
                      <Button variant="light"><BsCart3/> Add to cart </Button>
                   </Card.Body>
