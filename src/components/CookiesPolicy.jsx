@@ -1,4 +1,5 @@
-import "../components/styleSheet/CookiesPolicy"
+import "../components/CookiesPolicy"
+import '../components/styleSheet/CookiesPolicy.css'
 
 
 const CookiesPolicy = () => {

@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 // import ReactDOM from "React Router DOM";
+import '../components/styleSheet/Footer.css'
 
 
 
@@ -55,7 +56,7 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>INFORMATION</h6>
                 <p>
-                  <a href='#!' className='text-reset'>
+                  <a href='/CookiesPolicy' className='text-reset'>
                   Privacy Policy
                   </a>
                 </p>

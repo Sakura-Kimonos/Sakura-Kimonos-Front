@@ -9,7 +9,7 @@ import Home from '../pages/Home';
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
-// import CookiesPolicy from "../components/CookiesPolicy";
+import CookiesPolicy from "../components/CookiesPolicy";
 
 
 // import EditProduct from "../pages/EditProduct"
@@ -71,11 +71,11 @@ export const router = createBrowserRouter([
                     //     loader: loaderCardUser, 
                     // },
                         
-                    // {
-                    //     path: '/CookiesPolicy',
-                    //     element:<CookiesPolicy/>
+                    {
+                        path: '/CookiesPolicy',
+                        element:<CookiesPolicy/>
                         
-                    //  },
+                     },
                 
                 ]
             },
