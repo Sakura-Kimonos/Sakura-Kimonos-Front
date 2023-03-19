@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
-// import Root from "./Root";
+import Root from "./Root";
 import Home from '../pages/Home';
 // import AddProduct from '../pages/AddProduct';
 // import NotFound from "../pages/NotFound";
@@ -19,7 +19,7 @@ import AdmDashboard from "../pages/AdmDashboard";
 export const router = createBrowserRouter([
     { 
         path: '/',
-        // element: < Root/>,
+        element: < Root/>,
         // errorElement: <NotFound />, 
       
                 children: [
