@@ -20,7 +20,7 @@ return (
             <Nav className="">
                 <NavLink  to='/' className='text-navbar' href="#home">HOME</NavLink>
                 
-                <NavLink className='text-navbar' to="/form" href="#Post">PRODUCTS</NavLink>
+                <NavLink className='text-navbar' to="/userDashboard" href="#Post">PRODUCTS</NavLink>
                 
                 <NavLink className='text-navbar' to="/join" href="#form">JOIN</NavLink>
                 
