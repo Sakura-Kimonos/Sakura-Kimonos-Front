@@ -6,7 +6,7 @@ import Slide from '../components/Slide';
 import OurVision from "../components/OurVision";
 import {  useLoaderData } from 'react-router-dom'
 import Trending from "../components/Trending";
-// import PreviousFooter from '../components/PreviousFooter'
+import PreviousFooter from '../components/PreviousFooter'
 
 const Home = () => {
     const {products}  = useLoaderData();
@@ -21,7 +21,7 @@ const Home = () => {
                 <Trending products={products}/>
             </div>
             <OurVision />
-            {/* <PreviousFooter /> */}
+            <PreviousFooter />
             </section>
                 </>
     )

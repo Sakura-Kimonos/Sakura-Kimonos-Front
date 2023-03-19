@@ -1,11 +1,14 @@
 import "../components/CookiesPolicy"
 import '../components/styleSheet/CookiesPolicy.css'
+import Navbar from '../components/Navbar'
 
 
 const CookiesPolicy = () => {
     
 
     return (
+      <>
+      <Navbar/>
         <div className="text-container-cookies">
             <h2 id="title-cookies">PRIVACY POLICY</h2>
       <p className="text-cookies">
@@ -30,7 +33,7 @@ const CookiesPolicy = () => {
         When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device Information and Order Information.
       </p> <br></br>
     </div>
-            
+    </>     
 );
 };
 export default CookiesPolicy;
