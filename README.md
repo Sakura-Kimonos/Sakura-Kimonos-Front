@@ -61,6 +61,13 @@ Invest in an immersive experience in another ancestral culture through clothing,
 
 ![eva](https://user-images.githubusercontent.com/117834362/226352556-735936b9-3ead-40a8-ba5f-1450dfbbab9c.png)
 
+- Rocío Leiva https://github.com/Rocio-Leiva Scrum Master https://www.linkedin.com/in/rocio-leiva-pecho/
+
+![Rocío](https://user-images.githubusercontent.com/117834362/226356178-2aa06f95-88f3-473d-8bca-db5c61558260.jpg)
+
+- María Carvalho https://github.com/orgs/Sakura-Kimonos/people/Ma-shi22 Developer
+
+
 
 
 ## - How to install the project:
