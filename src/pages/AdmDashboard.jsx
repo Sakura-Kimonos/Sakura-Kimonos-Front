@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {  useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
-import {BsSearchHeart, BsCart3, BsPencilSquare} from 'react-icons/bs';
+import {BsSearchHeart,  BsPencilSquare, BsTrash} from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
 
 
@@ -57,8 +57,8 @@ function Dashboard() {
                   </Card.Text> */}
                    <Button variant="light"><BsSearchHeart/> View </Button>
                      <Button variant="light"><BsPencilSquare/> Edit </Button>
-                     {/* <Button variant="light"><BsCart3/> Add to cart </Button> */}
-                  </Card.Body>
+                     <Button variant="light"><BsTrash/> Delete </Button>
+                     </Card.Body>
                  </Card>
           )
         })}
@@ -69,24 +69,6 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import CardsUser from '../components/CardsUser';
 

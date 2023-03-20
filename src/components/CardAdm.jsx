@@ -1,11 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {BsSearchHeart, BsCart3} from 'react-icons/bs';
+import {BsSearchHeart, BsCart3, BsTrash} from 'react-icons/bs';
 import { useLoaderData } from "react-router-dom";
 
 
-const CardUser = () => {
-  const { CardUser } = useLoaderData();
+const CardAdm = () => {
+  const { CardAdm } = useLoaderData();
 
 return (
   <Card border="light" style={{ width: '18rem' }}>
@@ -19,16 +19,13 @@ return (
   //         </Card.Text> */}
          <Button variant="light"><BsSearchHeart/> View </Button>
          <Button variant="light"><BsPencilSquare/> Edit </Button>
+         <Button variant="light"><BsTrash/> Delete </Button>
            <Button variant="light"><BsCart3/> Add to cart </Button>
         </Card.Body>
        </Card>
 )
 };
-  export default CardUser;
-
-
-
-
+  export default CardAdm;
 
 
 // import Button from 'react-bootstrap/Button';
