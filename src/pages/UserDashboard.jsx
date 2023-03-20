@@ -5,7 +5,8 @@ import Card from "react-bootstrap/Card";
 import {  useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
-import '../pages/styleSheetPages/UserDashboard.css'
+import '../pages/styleSheetPages/UserDashboard.css';
+import SideBar from '../components/SideBar';
 
 
 
@@ -29,6 +30,8 @@ function Dashboard() {
 
 
   return (
+    <>
+    <SideBar/>
     <div className="container-gn" id="text">
        <br />
       <h1> Sakura Kimonos</h1>
@@ -64,6 +67,7 @@ function Dashboard() {
       </div>
     </>
     </div>
+  </>
   );
 }
 

@@ -6,9 +6,7 @@ import Table from 'react-bootstrap/Table';
 import "./stylesheets/MoreDetails.css";
 
 
-
 const ProductModalUser = ({ show, handleClose, product }) => {
-  console.log(product)
 
   return (
     <Modal show={show} onHide={handleClose} size="lg">
@@ -49,7 +47,6 @@ const ProductModalUser = ({ show, handleClose, product }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          
         </Modal.Footer>
       </Modal>)
 };

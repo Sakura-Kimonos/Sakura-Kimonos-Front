@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
@@ -5,11 +6,12 @@ import { useLoaderData } from "react-router-dom";
 import ProductModalUser from './ProductModalUser';
 
 
-const CardUser = (product) => {
+const CardUser = () => {
   const { CardUser } = useLoaderData();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
 return (
   <>
