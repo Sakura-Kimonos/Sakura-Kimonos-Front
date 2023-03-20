@@ -5,6 +5,10 @@
       "title": "Temari Kimono",
       "price": "$180",
       "description": "The fabrics is light and pleasant to wear in summer. The pattern represents temari balls, which are traditional Japanese decorative balls. When offered at New Year, they are considered as lucky charms.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Summer",
+      "pattern": "Daily life",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/womens-japanese-temari-kimono-one-size-739_2000x.jpg?v=1619718576"
     },
     {
@@ -12,6 +16,10 @@
       "title": "Hanafubuki Kimono",
       "price": "$175",
       "description": "these traditional kimonos for women will enhance your feminine side and enhance your natural elegance. The white cherry blossoms contrast nicely with the beautiful blue fabric.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Spring",
+      "pattern": "Cherry-blossoms",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/traditional-kimonos-for-women-hanafubuki-826_2000x.jpg?v=1619718567"
     },
     {
@@ -19,6 +27,10 @@
       "title": "Furisode Kimono",
       "price": "$250",
       "description": "With its pretty shades, from pale pink to light red, this furisode kimono is definitely elegant. The floral pattern represents peonies, which stands for the feminine ideal in Japanese culture. Considered as the queen of flowers, the peony embodies the following virtues: independence, kindness and strength of spirit.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "All-year long",
+      "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/womens-japanese-furisode-kimono-botan-one-size-165_2000x.jpg?v=1619720161"
     },
     {
@@ -26,6 +38,10 @@
       "title": "Royal Blue Kimono",
       "price": "$178",
       "description": "Made from a high quality polyester fabric, it is flowing and comfortable to wear for any occasion. Enjoy the majesty of the Japanese cranes flying in groups from the bottom to the top of the dress. These large white birds native to Japan are known to bring peace and longevity.",
+      "category": "Kimono",
+      "material": "Polyester",
+      "season": "Winter",
+      "pattern": "Birds",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/royal-blue-kimono-for-women-s-805_2000x.jpg?v=1619723058"
     },
     {
@@ -33,6 +49,10 @@
       "title": "Ivory Kimono",
       "price": "$185",
       "description": "Printed on an ivory colored fabric, sakura flowers will bring you luck and happiness. The high quality fabric in soft and breathable polyester guarantees a total well-being.",
+      "category": "Kimono",
+      "material": "Polyester",
+      "season": "Summer",
+      "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/ivory-kimono-for-women-s-240_5000x.jpg?v=1619722926"
     },
     {
@@ -40,6 +60,10 @@
       "title": "Dragon Kimono",
       "price": "$235",
       "description": "Enjoy the legends of medieval Japan with this Ryu dragon pattern covered with cherry blossoms! The original and meticulous design adds a mysterious and intriguing dimension to this kimono.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Autumn",
+      "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/dragon-kimono-robe-for-women-s-957_5000x.jpg?v=1619723007"
     },
     {
@@ -47,6 +71,10 @@
       "title": "Blue Floral Kimono",
       "price": "$190",
       "description": "Assume your passion for Japan proudly by wearing this beautiful blue floral kimono for women. Its blue color and lotus flower design gives it a nice vintage touch. Worn traditionally with an obi belt or revisited in a modern outfit, this Japanese kimono will be a perfect addition to your wardrobe.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Summer",
+      "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/womens-blue-floral-kimono-lotus-607_5000x.jpg?v=1619718541"
     },
     {
@@ -54,6 +82,10 @@
       "title": "Long Kimono",
       "price": "$220",
       "description": "Allow your inner child to express herself by wearing this cute Japanese kimono with its kawaii pattern representing adorable little rabbits. The pastel colors add softness to your outfit. This women's Kimono is perfect to fully assume your passion for Japanese culture.",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Spring",
+      "pattern": "Rabbits",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/long-kimono-robes-for-women-kawaii-770_5000x.jpg?v=1619718600"
     },
     {
@@ -61,6 +93,10 @@
       "title": "Yukata kimono",
       "price": "$145",
       "description": "The print of this women's yukata kimono is loaded with lucky symbols. The yagasuri (arrow feathers) pattern protects and brings good luck. According to the tradition, a kimono decorated with this pattern used to be offered to newlyweds since, just as the arrow does not return back, the young bride is not supposed to return to her parents' home as well.",
+      "category": "Yukata",
+      "material": "Cotton",
+      "season": "Summer",
+      "pattern": "Daily life",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/japanese-kimono-yukata-for-women-one-size-930_5000x.jpg?v=1619722857"
     },
     {
@@ -68,6 +104,10 @@
       "title": "Light Blue Kimono",
       "price": "$135",
       "description": "Whether you're going to a Japanese festival, or a matsuri, you'll look absolutely beautiful in this lovely light blue kimono with a floral pattern and maru (Japanese circle).",
+      "category": "Kimono",
+      "material": "Cotton",
+      "season": "Spring",
+      "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/light-blue-kimono-for-women-s-276_5000x.jpg?v=1619723021"
     }
   ]

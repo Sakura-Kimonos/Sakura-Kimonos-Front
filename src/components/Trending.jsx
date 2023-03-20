@@ -11,6 +11,7 @@ function Trending({ products, deleteProduct }) {
 
   return (
     <div className="cards row justify-content-center">
+       <h2 id="last-products"className="title">LAST PRODUCTS</h2>
       {resultTrending.map((product) => {
         return (
           <div className="col-10 col-sm-6 col-md-4 col-lg-3 mb-3" key={product.id}>

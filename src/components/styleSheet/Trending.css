@@ -3,3 +3,12 @@
     margin-top: 2%;
     margin-bottom: 3%;
 }
+
+#last-products {
+    width: 70%; 
+}
+
+#last-products:hover {
+    background-color: white; 
+    color: #FF7171;
+}
