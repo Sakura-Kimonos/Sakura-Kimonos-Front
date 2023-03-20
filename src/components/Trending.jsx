@@ -26,11 +26,11 @@ function Trending({ products, deleteProduct }) {
                   <BsCart3 /> Add to cart
                 </Button>
               </Card.Body>
-              <Link to={`/userDashboard/${product.id}`}>
+              {/* <Link to={`/userDashboard/${product.id}`}>
                 <Button className="btn-ad" id="btn-edit">
                   More information
                 </Button>
-              </Link>
+              </Link> */}
             </Card>
           </div>
         );

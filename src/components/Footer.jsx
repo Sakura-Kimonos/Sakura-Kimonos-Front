@@ -98,8 +98,11 @@ export default function Footer() {
                   Sevilla, Sv 41002, SP
                 </p>
                 <p>
-                  <MDBIcon icon="envelope" className="me-3" />
+                  <MDBIcon icon="envelope"   className="me-3" />
+                  <a href='<' className='text-reset'>
                   SakuraKimonos@gmail.com
+                  </a>
+                  
                 </p>
                 <p>
                   <MDBIcon icon="phone" className="me-3" /> + 034 956 142 818
