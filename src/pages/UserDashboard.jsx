@@ -7,15 +7,21 @@ import { productHandler } from "../handlers/productHandler";
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 import '../pages/styleSheetPages/UserDashboard.css';
 import SideBar from '../components/SideBar';
+import ProductModalUser from '../components/ProductModalUser';
+import Footer from '../components/Footer';
 
 
 
 function Dashboard() {
- 
+  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-  const { products} = useLoaderData();
+  const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
   const [searchQuery, setSearchQuery] = useState("");
   const data = productsData.filter(
@@ -35,7 +41,6 @@ function Dashboard() {
     <div className="container-gn" id="text">
        <br />
       <h1> Sakura Kimonos</h1>
-    
     <>
       <div className="container-bar">
         <input
@@ -49,19 +54,18 @@ function Dashboard() {
       <div className="cards">
         {data.map((product) => {
          return (
+          <>
             <Card border="light" style={{ width: '18rem' }}>
                    <Card.Img variant="top" src={product.img}  />
                    <Card.Body className='text-center'>
                      <Card.Title>{product.title} </Card.Title>
                      <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
-                     {/* <Card.Text>
-                  Some quick example text to build on the card title and make up the
-               bulk of the card's content.
-                  </Card.Text> */}
-                   <Button variant="light"><BsSearchHeart/> View </Button>
+                   <Button variant="light" onClick={handleShow}><BsSearchHeart/> View </Button>
                      <Button variant="light"><BsCart3/> Add to cart </Button>
                   </Card.Body>
                  </Card>
+                 <ProductModalUser show={show} handleClose={handleClose} product={product} />
+          </>
           )
         })}
       </div>

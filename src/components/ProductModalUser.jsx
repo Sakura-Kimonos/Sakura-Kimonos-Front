@@ -1,24 +1,25 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
-import "./stylesheets/MoreDetails.css";
+
+
 
 
 const ProductModalUser = ({ show, handleClose, product }) => {
 
   return (
-    <Modal show={show} onHide={handleClose} size="lg">
+    <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
       <Modal.Header closeButton>
-        <Modal.Title id="ProductTitle"> {product.price}€ - {product.title}  </Modal.Title>
+        <Modal.Title>  {product.title} </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-                  <Card className="text-center" style={{ width: '90%'}} border="light">
+                  <div  id="modal" className="text-center" style={{ width: '80%'}} border="light">
                         <Card.Img variant="top" src={product.img} />
                         <Card.Body>
                           <Card.Text>
                            <p>  {product.description}  </p>
+                          </Card.Text>
                            <Table striped bordered hover>
                               <tbody>
                                 <tr>
@@ -39,15 +40,9 @@ const ProductModalUser = ({ show, handleClose, product }) => {
                                 </tr>
                               </tbody>
                             </Table>
-                          </Card.Text>
                         </Card.Body>
-                  </Card>
+                  </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>)
 };
 
