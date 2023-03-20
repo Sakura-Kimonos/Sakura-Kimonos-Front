@@ -10,7 +10,7 @@ import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
-
+import ContactUs from '../components/ContactUs';
 
 // import EditProduct from "../pages/EditProduct"
 
@@ -58,6 +58,12 @@ export const router = createBrowserRouter([
                         element: <AdmDashboard />,
                         loader: loaderAdvertisement,
                     },  
+                    {
+                        path: '/contactUs',
+                        element: <ContactUs />,
+                        loader: loaderAdvertisement,
+                    },  
+
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,
