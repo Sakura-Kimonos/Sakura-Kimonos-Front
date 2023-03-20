@@ -5,7 +5,8 @@ import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 // import ReactDOM from "React Router DOM";
 import '../components/styleSheet/Footer.css'
-
+import ContactUs from '../components/ContactUs'
+import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
@@ -99,9 +100,10 @@ export default function Footer() {
                 </p>
                 <p>
                   <MDBIcon icon="envelope"   className="me-3" />
-                  <a href='<' className='text-reset'>
+                  <Link to={<ContactUs />}></Link>
+                  {/* <a href='' className='text-reset'> */}
                   SakuraKimonos@gmail.com
-                  </a>
+                  {/* </a> */}
                   
                 </p>
                 <p>

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BsSearchHeart, BsCart3 } from 'react-icons/bs';
 import './styleSheet/Trending.css';
-import { Link } from 'react-router-dom';
+
 
 function Trending({ products, deleteProduct }) {
   const randomIndex = Math.floor(Math.random() * (products.length - 3));
