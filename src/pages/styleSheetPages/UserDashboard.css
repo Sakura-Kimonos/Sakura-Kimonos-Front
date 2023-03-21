@@ -1,10 +1,15 @@
+#root {
+    height: 100vh;
+    position: relative;
+}
+
 .cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-margin-bottom: 0%;
+    margin-bottom: 0%;
 }
 
 .card {
@@ -36,7 +41,7 @@ margin-bottom: 0%;
     background-color: #85BBA8;
     color: white;
     text-align: center;
-    
+
 
 }
 

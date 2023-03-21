@@ -1,22 +1,29 @@
-form{
+.form-contact{
     display: flex;
     flex-direction: column;
-}
+    align-items: center;
+  
+    /* padding-top:30%; */
+    /* margin-bottom: 15%; */
 
+  
+}
+.text-container-contact{
+    background-color: #85BBA8;
+    color: #3F3F40;
+}
 textarea{
     background-color: #ffffff;
     width: 25vw;
     color: white;
     border-radius: 1vh;
+    
 }
 
-.form-contact{
-    width: 50vw;
-    padding: 2vh;
-    margin-top: -2vh;
-}
+
 .titleContact{
-    color: #cbdad5;
+    color: white;
+  
 }
 
 #btn-ad{
@@ -27,7 +34,7 @@ textarea{
 
 #btn-ad:hover{
 color: white;
-background-color: #566981;
+background-color: #169D8D;
 box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 

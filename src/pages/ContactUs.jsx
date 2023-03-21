@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-// import '../components/styleSheet/ContactUs.css'
-import '../pages/styleSheetPages/UserDashboard.css'
+import '../pages/styleSheetPages/ContactUs.css'
+import Navbar from '../components/Navbar'
+
 
 function ContactForm() {
   const [message, setMessage] = useState("");
@@ -19,6 +20,7 @@ function ContactForm() {
     const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
     window.location.href = mailtoUrl;
     setModalIsOpen(true);
+    window.location.reload();
   };
 
   const closeModal = () => {
@@ -27,7 +29,9 @@ function ContactForm() {
   };
 
   return (
-    <div className="container-gn">
+    <>
+    {/* <Navbar/> */}
+    <div className="text-container-contact">
       <form className="form-contact" onSubmit={handleFormSubmit}>
         <h2 className="titleContact">Contact with us</h2>
         <label>
@@ -40,8 +44,7 @@ function ContactForm() {
         <button className="btn btn-primary" id="btn-ad" type="submit">
         Send Message
         </button>
-      </form>
-      <Modal
+        {/* <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         className="modal"
@@ -54,8 +57,11 @@ function ContactForm() {
         <button className="modal-close-btn" onClick={closeModal}>
           Close
         </button>
-      </Modal>
+      </Modal> */}
+      </form>
+      
     </div>
+    </>   
   );
 }
 

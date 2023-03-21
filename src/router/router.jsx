@@ -10,7 +10,7 @@ import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
-import ContactUs from '../components/ContactUs';
+import ContactUs from '../pages/ContactUs';
 
 // import EditProduct from "../pages/EditProduct"
 

@@ -10,7 +10,7 @@ import '../components/styleSheet/Footer.css'
 export default function Footer() {
     return (
         
-      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F" }}  >
+      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F", position: "float", bottom: 0 }}  >
         <section  size="sm"className='small text-sm text-white d-flex justify-content-center justify-content-lg-between p-4 border-bottom' id="Footer">
           <div className='text-sm  me-5 d-none d-lg-block'>
             <span>Get connected with us on social networks:</span>           
@@ -94,7 +94,7 @@ export default function Footer() {
                 <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                 <p>
                   <MDBIcon icon="home" className="me-2" />
-                  Sevilla, Sv 41002, SP
+                  Sevilla, 41002, Spain
                 </p>
                 <p>
                   <MDBIcon icon="envelope"   className="me-3" />
