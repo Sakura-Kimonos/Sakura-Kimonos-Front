@@ -7,17 +7,18 @@ import Table from 'react-bootstrap/Table';
 
 
 const ProductModalUser = ({ show, handleClose, product }) => {
+  // console.log(product)
   return (
     <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
       <Modal.Header closeButton>
         <h1 className='text-center' style={{width: '100%'}}>  {product.title} </h1>
         </Modal.Header>
         <Modal.Body>
-                  <div id="modal" className="modal-body" style={{ width: '80%'}} border="light">
-                        <img variant="top" style={{height: '400px', width: '400px'}} className="justify-content-center" src={product.img} />
+                  <div id="modal" className="modal-body" style={{ width: '100%'}} border="light">
+                        <img variant="top" style={{height: '400px', width: '400px', alignItems: 'center'}} src={product.img} />
                         <div>
                           
-                           <p style={{margin: '20px'}}>  {product.description}  </p>
+                           <p className='text-center' style={{marginTop: '20px', width: '100%'}}>  {product.description}  </p>
                         
                            <Table striped bordered hover>
                               <tbody>

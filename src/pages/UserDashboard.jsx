@@ -34,8 +34,8 @@ function Dashboard() {
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    setProductModal(product => product.id == productId)
-    console.log(productModal)
+    console.log(productId)
+    setProductModal(productsData.find(product => product.id == productId));
     setShow(true)
   };
 
@@ -56,8 +56,10 @@ function Dashboard() {
           onChange={handleSearchChange}
         />
       </div>
+
       <div className="cards">
         {data.map((product) => {
+          console.log(product)
          return (
           <>
             <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
@@ -66,7 +68,7 @@ function Dashboard() {
                     <Card.Body className='text-center'>
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
-                    <Button variant="light" onClick={handleShow}><BsSearchHeart/> View </Button>
+                    <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
                       <Button variant="light"><BsCart3/> Add to cart </Button>
                     </Card.Body>
               </Card>
