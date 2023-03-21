@@ -3,10 +3,8 @@ import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-// import ReactDOM from "React Router DOM";
 import '../components/styleSheet/Footer.css'
-// import ContactUs from '../components/ContactUs'
-// import { Link } from 'react-router-dom';
+
 
 
 export default function Footer() {
@@ -47,7 +45,7 @@ export default function Footer() {
               <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>
                   <MDBIcon icon="gem" className="me-3" />
-                  SakuraKimono
+                  SakuraKimonos
                 </h6>
                 <p>
                 Sakura Kimonos is a website for the sale of Kimonos  inspired by the traditional Japanese garment.
@@ -100,10 +98,9 @@ export default function Footer() {
                 </p>
                 <p>
                   <MDBIcon icon="envelope"   className="me-3" />
-                  {/* <Link to={<ContactUs />}></Link> */}
-                  {/* <a href='' className='text-reset'> */}
+                   <a href='/ContactUs' className='text-reset'>
                   SakuraKimonos@gmail.com
-                  {/* </a> */}
+                   </a> 
                   
                 </p>
                 <p>
@@ -120,7 +117,7 @@ export default function Footer() {
         <div className='text-white text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
           © 2023 Copyright:
           <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-            KasuraKimonos.com
+           SakuraKimonos.com
           </a>
         </div>
       </MDBFooter>
