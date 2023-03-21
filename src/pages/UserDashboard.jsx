@@ -69,7 +69,7 @@ function Dashboard() {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
-                      <Button variant="light"><BsCart3/> Add to cart </Button>
+                    <Button variant="light"><BsCart3/> Add to cart </Button>
                     </Card.Body>
               </Card>
           </>
