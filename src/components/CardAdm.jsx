@@ -19,7 +19,8 @@ return (
   //         </Card.Text> */}
          <Button variant="light"><BsSearchHeart/> View </Button>
          <Button variant="light"><BsPencilSquare/> Edit </Button>
-           <Button variant="light"><BsCart3/> Add to cart </Button>
+         <Button variant="light"><BsTrash/> Delete </Button>
+          
         </Card.Body>
        </Card>
 )
@@ -48,7 +49,7 @@ return (
 //         </Card.Text> */}
 //         <Button variant="light"><BsSearchHeart/> View </Button>
 //         <Button variant="light"><BsPencilSquare/> Edit </Button>
-//         <Button variant="light"><BsTrash/> Delete </Button>
+        
 //       </Card.Body>
 //     </Card>
 //   );
