@@ -19,9 +19,9 @@ const Home = () => {
                 <SubNavbar/>
                 <Slide/>
                 <h2 className="title">LAST PRODUCTS</h2>
-            <div className="anuncios">
+
                 <Trending products={products}/>
-            </div>
+            
             <OurVision />
         
             <PreviousFooter />

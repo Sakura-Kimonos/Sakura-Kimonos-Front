@@ -10,7 +10,7 @@ function Trending({ products, deleteProduct }) {
   const resultTrending = products.slice(randomIndex, randomIndex + 3);
 
   return (
-    <div className="cards row justify-content-center">
+    <div className="cards justify-content-center">
       {resultTrending.map((product) => {
         return (
           <div className="col-10 col-sm-6 col-md-4 col-lg-3 mb-3" key={product.id}>

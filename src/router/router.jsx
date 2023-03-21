@@ -3,7 +3,7 @@ import { productHandler } from "../handlers/productHandler";
 import Root from "./Root";
 import Home from '../pages/Home';
 // import AddProduct from '../pages/AddProduct';
-// import NotFound from "../pages/NotFound";
+import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     { 
         path: '/',
         element: < Root/>,
-        // errorElement: <NotFound />, 
+        errorElement: <NotFound />, 
       
                 children: [
                     {
