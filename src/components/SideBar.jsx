@@ -14,10 +14,12 @@ import {
 import {
   AiOutlineUserAdd
 } from 'react-icons/ai';
-
 import {
   SlLogin
 } from 'react-icons/sl';
+import {
+  RiArrowGoBackLine
+} from 'react-icons/ri';
 
 import '../components/styleSheet/SideBar.css';
 
@@ -57,6 +59,13 @@ function SideBar() {
 
     <div className="sidebar-menu">
       <ul>
+      <li>
+          <a href="#">
+          <RiArrowGoBackLine className="sidebar-icon"/> 
+            {!collapsed && <span className="sidebar-text"> Homepage </span>}
+          </a>
+        </li>
+        <div className='first-block'> 
       <li>
           <a href="#">
           <BsFlower1 className="sidebar-icon"/> 
@@ -99,6 +108,7 @@ function SideBar() {
             {!collapsed && <span className="sidebar-text"> Sleepwear </span>}
           </a>
         </li>
+        </div>
         <div className="second-block"> 
         <li>
           <a href="#">

@@ -95,6 +95,10 @@
     }
   }
 
+  .first-block {
+    margin-top: 50px;
+  }
+
 .second-block {
   margin-top: 50px; 
 }
