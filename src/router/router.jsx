@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 // import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
-// import ShoppingCart from "../pages/ShoppingCart";
+import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 
 
@@ -28,11 +28,18 @@ export const router = createBrowserRouter([
                         element:<Home />, 
                         loader: loaderAdvertisement,
                     },
-                    // {
-                    //     path: '/cart',
-                    //     element: <ShoppingCart />,
-                    //     // loader: loaderCardUser,
-                    // }, 
+                    {
+                        path: '/cart',
+                        element: <ShoppingCart />,
+                        loader: loaderCardUser,
+                    },
+                    
+                    //{
+                       // path: '/cart',
+                        //element: <ShoppingCart />,
+                        //loader: loaderCartItem,
+                    //},
+
                     // {
                     //     path: '/addProduct',
                     //     element: <AddProduct />,
@@ -58,11 +65,11 @@ export const router = createBrowserRouter([
                         element: <AdmDashboard />,
                         loader: loaderAdvertisement,
                     },  
-                    // {
-                    //     path: '/cart',
-                    //     element: <ShoppingCart />,
-                    //     // loader: loaderAdvertisement,
-                    // },  
+                    {
+                        path: '/ShoppingCart',
+                        element: <ShoppingCart />,
+                        //loader: loaderAdvertisement,
+                    },  
                     
                 
                     // {
