@@ -11,6 +11,14 @@ import {
     TbLetterU,
     TbLetterR
 } from "react-icons/tb";
+import {
+  AiOutlineUserAdd
+} from 'react-icons/ai';
+
+import {
+  SlLogin
+} from 'react-icons/sl';
+
 import '../components/styleSheet/SideBar.css';
 
 const options = [
@@ -91,6 +99,20 @@ function SideBar() {
             {!collapsed && <span className="sidebar-text"> Sleepwear </span>}
           </a>
         </li>
+        <div className="second-block"> 
+        <li>
+          <a href="#">
+            <AiOutlineUserAdd className="sidebar-icon" />
+            {!collapsed && <span className="sidebar-text"> Join </span>}
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <SlLogin className="sidebar-icon" />
+            {!collapsed && <span className="sidebar-text"> Login </span>}
+          </a>
+        </li>
+        </div>
       </ul>
     </div>
   </div>

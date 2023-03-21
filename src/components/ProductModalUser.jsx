@@ -14,8 +14,8 @@ const ProductModalUser = ({ show, handleClose, product }) => {
         <Modal.Title>  {product.title} </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-                  <div  id="modal" className="text-center" style={{ width: '80%'}} border="light">
-                        <Card.Img variant="top" src={product.img} />
+                  <div id="modal" className="modal-body" style={{ width: '80%'}} border="light">
+                        <Card.Img variant="top" className='modal-img' src={product.img} />
                         <Card.Body>
                           <Card.Text>
                            <p>  {product.description}  </p>

@@ -5,14 +5,14 @@
     justify-content: center;
 }
 
-#modal{
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
+.modal-body{
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
 }
 
-.modal-image {
-    width: 30px;
-    height: 30px; 
+.modal-img {
+    height: 100px !important; 
+    width: 100px !important; 
 }
