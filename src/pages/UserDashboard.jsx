@@ -8,15 +8,11 @@ import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 import '../pages/styleSheetPages/UserDashboard.css';
 import SideBar from '../components/SideBar';
 import ProductModalUser from '../components/ProductModalUser';
-import Footer from '../components/Footer';
+
 
 
 
 function Dashboard() {
-  
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -33,6 +29,15 @@ function Dashboard() {
     await productHandler.deleteProduct(id);
     setProductsData(productsData.filter(post => post.id !== id))
 }
+
+  const [show, setShow] = useState(false);
+  const [productModal, setProductModal] = useState({});
+  const handleClose = () => setShow(false);
+  const handleShow = (productId) => {
+    setProductModal(product => product.id == productId)
+    console.log(productModal)
+    setShow(true)
+  };
 
 
   return (
@@ -55,16 +60,16 @@ function Dashboard() {
         {data.map((product) => {
          return (
           <>
-            <Card border="light" style={{ width: '18rem' }}>
-                   <Card.Img variant="top" src={product.img}  />
-                   <Card.Body className='text-center'>
-                     <Card.Title>{product.title} </Card.Title>
-                     <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
-                   <Button variant="light" onClick={handleShow}><BsSearchHeart/> View </Button>
-                     <Button variant="light"><BsCart3/> Add to cart </Button>
-                  </Card.Body>
-                 </Card>
-                 <ProductModalUser show={show} handleClose={handleClose} product={product} />
+            <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
+              <Card border="light" style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={product.img}  />
+                    <Card.Body className='text-center'>
+                      <Card.Title>{product.title} </Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
+                    <Button variant="light" onClick={handleShow}><BsSearchHeart/> View </Button>
+                      <Button variant="light"><BsCart3/> Add to cart </Button>
+                    </Card.Body>
+              </Card>
           </>
           )
         })}

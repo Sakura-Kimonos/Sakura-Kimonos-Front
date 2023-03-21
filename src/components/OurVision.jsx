@@ -5,7 +5,7 @@ const OurVision = () => {
     
 
     return (
-        <section className="about-ous dark-section d-flex flex-column justify-content-center align-items-center">
+        <section id="our-vision" className="about-ous dark-section d-flex flex-column justify-content-center align-items-center">
         <div className="box">
           <h2 className="section-title">Our Vision</h2>
           <p className="section-text">Sakura Kimonos is a website for the sale of Kimonos  inspired by the traditional Japanese garment.</p>
