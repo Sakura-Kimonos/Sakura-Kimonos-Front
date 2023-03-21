@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-
+// import '../components/styleSheet/ContactUs.css'
+import '../pages/styleSheetPages/UserDashboard.css'
 
 function ContactForm() {
   const [message, setMessage] = useState("");
@@ -26,7 +27,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="container-form">
+    <div className="container-gn">
       <form className="form-contact" onSubmit={handleFormSubmit}>
         <h2 className="titleContact">Contact with us</h2>
         <label>
