@@ -28,6 +28,7 @@ function ContactForm() {
     <div className="text-container-contact d-flex justify-content-center ">
       <form className="form-contact" onSubmit={handleFormSubmit}>
         <h2 className="titleContact">Contact with us</h2>
+        <br></br>
         <label>
           <textarea
             value={message}

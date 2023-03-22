@@ -5,7 +5,7 @@ import './styleSheetPages/NotFound.css'
 
 const NotFound = () => {
     const error = useRouteError();
-    console.log(error);
+
   
     return (
       <div className="column">
