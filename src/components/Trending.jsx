@@ -30,7 +30,6 @@ function Trending({ products}) {
           <>
             <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
               <div className="col-10 col-sm-6 col-md-4 col-lg-3 mb-3" key={product.id}>
-                <CardsUser> </CardsUser>
                 <Card className="card" border="light">
                   <Card.Img variant="top" src={product.img} />
                   <Card.Body className="text-center">
