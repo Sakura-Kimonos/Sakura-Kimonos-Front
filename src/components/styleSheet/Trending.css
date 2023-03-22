@@ -3,3 +3,19 @@
     margin-top: 2%;
     margin-bottom: 3%;
 }
+
+#last-products {
+    margin-top: .3125rem; 
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-right: 30%;
+    margin-left: 30%;
+    background-color: #FF7171;
+    width: 50%;
+}
+
+#last-products:hover {
+    background-color: white; 
+    color: #FF7171;
+}

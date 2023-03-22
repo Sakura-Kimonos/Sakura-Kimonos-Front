@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,
-                    //     // loader: loaderCardUser,
+                    //     loader: loaderCardUser,
                     // }, 
                     {
                         path: '/AddProduct',

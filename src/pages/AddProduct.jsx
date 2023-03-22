@@ -1,6 +1,7 @@
 import "./styleSheetPages/AddProduct.css"
 import { useState } from 'react';
 import { productHandler } from '../handlers/productHandler';
+import SideBar from '../components/SideBar';
 // import { Modal } from 'react-bootstrap';
 
 const CreateProduct = () => {
@@ -72,6 +73,8 @@ const CreateProduct = () => {
   // const handleShow = () => setShow(true);
 
   return (
+    <>
+    <SideBar/>
     <div className="container-form">
       <form onSubmit={handleSubmit} itemID="form1">
         <h1>Create a new product</h1>
@@ -132,6 +135,7 @@ const CreateProduct = () => {
         </Modal> */}
       </form>
     </div>
+  </>
   );
 };
 export default CreateProduct;

@@ -6,6 +6,7 @@ import {  useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import {BsSearchHeart,  BsPencilSquare, BsTrash} from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
+import SideBar from '../components/SideBar';
 
 
 
@@ -29,10 +30,11 @@ function Dashboard() {
 
 
   return (
-    <div className="container-gn" id="text">
-       <br />
+    <>
+    <SideBar/>
+      <div className="container-gn" id="text">
+      <br />
       <h1> Sakura Kimonos</h1>
-    
     <>
       <div className="container-bar">
         <input
@@ -46,25 +48,22 @@ function Dashboard() {
       <div className="cards">
         {data.map((product) => {
          return (
-            <Card border="light" style={{ width: '18rem' }}>
-                   <Card.Img variant="top" src={product.img}  />
-                   <Card.Body className='text-center'>
-                     <Card.Title>{product.title} </Card.Title>
-                     <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
-                     {/* <Card.Text>
-                  Some quick example text to build on the card title and make up the
-               bulk of the card's content.
-                  </Card.Text> */}
-                   <Button variant="light"><BsSearchHeart/> View </Button>
-                     <Button variant="light"><BsPencilSquare/> Edit </Button>
-                     <Button variant="light"><BsTrash/> Delete </Button>
-                     </Card.Body>
-                 </Card>
-          )
-        })}
+                <Card border="light" style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={product.img}  />
+                <Card.Body className='text-center'>
+                <Card.Title>{product.title} </Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
+                <Button variant="light"><BsSearchHeart/> View </Button>
+                <Button variant="light"><BsPencilSquare/> Edit </Button>
+                <Button variant="light"><BsTrash/> Delete </Button>
+                </Card.Body>
+                </Card>
+              )
+            })}
+          </div>
+        </>
       </div>
     </>
-    </div>
   );
 }
 
