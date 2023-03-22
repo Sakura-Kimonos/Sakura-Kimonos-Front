@@ -30,7 +30,7 @@ Invest in an immersive experience in another ancestral culture through clothing,
 
 ## :camera: - Screenshots
 
-| Trello | Figma | 
+| <a href="https://trello.com/b/uXQ3TO7Y/e-commerce">Trello</a> | <a href="https://www.figma.com/file/64inr6vpFqOsRp8V5BLpCl/SakuraKimonos?node-id=0-1&t=S0SMPu28KArf3gpZ-0">Figma</a> | 
 | :---: | :---: | 
 |![trello 1](https://user-images.githubusercontent.com/117834362/226338848-e378b190-d101-45e2-90cc-6d32109708ba.png)![Trello2](https://user-images.githubusercontent.com/117834362/226338858-217b42e2-1a26-43fb-a36d-f39338b2206e.png)|![captura pantalla figma](https://user-images.githubusercontent.com/117834362/226335880-87d67bda-3a21-434f-bff6-be912b19f6c5.png)|
 
@@ -38,11 +38,7 @@ Invest in an immersive experience in another ancestral culture through clothing,
 
 ## -🔧Stacks:
 
-
-## - Technologies
-
-
- | Node.js | NPM | React |JavaScript | CSS3 | HTML5 | C# | ASP.NET Core 6 | Entity Framework 7 | SQL Server| Bootstrap |
+| Node.js | NPM | React |JavaScript | CSS3 | HTML5 | C# | ASP.NET Core 6 | Entity Framework 7 | SQL Server| Bootstrap |
 
 
 ## - Tools
@@ -52,25 +48,26 @@ Invest in an immersive experience in another ancestral culture through clothing,
 - GitHub
 - Visual Studio Code
 - Visual Studio
+- Canva
 
 
 
 ## -👩‍ 💻Group members:
 
-- Eva Aramburu  https://github.com/EvaAramburu Product Owner https://www.linkedin.com/in/eva-aramburu19950913/
-
-![eva](https://user-images.githubusercontent.com/117834362/226352556-735936b9-3ead-40a8-ba5f-1450dfbbab9c.png)
-
-- Rocío Leiva https://github.com/Rocio-Leiva Scrum Master https://www.linkedin.com/in/rocio-leiva-pecho/
-
-![Rocío](https://user-images.githubusercontent.com/117834362/226356178-2aa06f95-88f3-473d-8bca-db5c61558260.jpg)
-
-- María Carvalho https://github.com/orgs/Sakura-Kimonos/people/Ma-shi22 Developer
 
 
 
+https://github.com/Rocio-Leiva
+Product Owner https://www.linkedin.com/in/eva-aramburu19950913/ 
+Scrum Master https://www.linkedin.com/in/rocio-leiva-pecho/
 
-## - How to install the project:
+
+<img src="https://user-images.githubusercontent.com/117834362/226867726-d41a6307-9121-48bf-9083-acbb2da7db5e.jpg" width=115><ul><li>Scrum Master</li><li><a href="https://github.com/Rocio-Leiva">Rocío Leiva</a></li><li><a href="https://www.linkedin.com/in/rocio-leiva-pecho/">LinkedIn</a></li></ul>|<img src="https://user-images.githubusercontent.com/117834362/226889415-9cee7e56-4bf8-439b-9221-fbdc7332b48a.jpg" width=115><ul><li>Product Owner</li><li><a href="https://github.com/EvaAramburu">Eva Aramburu</a></li><li><a href="https://www.linkedIn.com/in/eva-aramburu19950913/">LinkedIn</a></li></ul>|<img src="https://user-images.githubusercontent.com/117834362/226875930-748fc1d7-13ba-4be0-b59a-1a5ba8892dd2.png" width=115><ul><li>Developer</li><li><a href="https://github.com/Ma-shi22">María Carvalho</a></li><li><a href="https://www.linkedin.com/in/mariashirleicarvalho/">LinkedIn</a></li></ul> |<img src="https://user-images.githubusercontent.com/117834362/226876284-d3489d97-f910-4cb9-9470-af3f6fa31da2.png" width=115><ul><li>Developer</li><li><a href="https://github.com/Diancris">Diana Romero</a></li><li><a href="">LinkedIn</a></li></ul> |<img src="https://user-images.githubusercontent.com/117834362/226876297-6c7b09d6-c2fe-4a4e-9406-324bd8aca214.jpg" width=115><ul><li>Developer</li><li><a href="https://github.com/VeronicaAnais">Verónica Gallardo</a></li><li><a href="https://www.linkedin.com/in/ver%C3%B3nica-gallardo-pedemonte-b537314b/">LinkedIn</a></li></ul>|
+| :---: | :---: | :---: |  :---: |  :---: | 
+
+
+
+## - How to install the project (Front):
 
 1) Clone the repository
 2) npm install
@@ -79,6 +76,7 @@ Invest in an immersive experience in another ancestral culture through clothing,
 5) npm run dev
 
 
+## - How to install the project (Back):
 
 
 ## - 📚Methodology:
@@ -87,7 +85,7 @@ Invest in an immersive experience in another ancestral culture through clothing,
 - Mob Programming.
 - Pair Programming.
 
-
+## - 👀  Testing:
 
 ## - 🧪Next Steps:
 
