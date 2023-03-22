@@ -3,6 +3,7 @@ import {
     BsArrowBarRight,
     BsArrowBarLeft,
     BsFlower1,
+    BsCart3
   } from "react-icons/bs";
 import {
     TbLetterS,
@@ -60,7 +61,7 @@ function SideBar() {
     <div className="sidebar-menu">
       <ul>
       <li>
-          <a href="#">
+          <a href="/">
           <RiArrowGoBackLine className="sidebar-icon"/> 
             {!collapsed && <span className="sidebar-text"> Homepage </span>}
           </a>
@@ -109,15 +110,21 @@ function SideBar() {
           </a>
         </li>
         </div>
+        <li>
+          <a href="/cart">
+            <BsCart3 className="sidebar-icon" />
+            {!collapsed && <span className="sidebar-text"> Shopping Cart </span>}
+          </a>
+        </li>
         <div className="second-block"> 
         <li>
-          <a href="#">
+          <a href="/join">
             <AiOutlineUserAdd className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Join </span>}
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/login">
             <SlLogin className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Login </span>}
           </a>

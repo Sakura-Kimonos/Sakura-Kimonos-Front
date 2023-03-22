@@ -3,7 +3,6 @@ import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-// import ReactDOM from "React Router DOM";
 import '../components/styleSheet/Footer.css'
 
 
@@ -11,7 +10,7 @@ import '../components/styleSheet/Footer.css'
 export default function Footer() {
     return (
         
-      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F" }}  >
+      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F", position: "float", bottom: 0 }}  >
         <section  size="sm"className='small text-sm text-white d-flex justify-content-center justify-content-lg-between p-4 border-bottom' id="Footer">
           <div className='text-sm  me-5 d-none d-lg-block'>
           </div>
@@ -45,7 +44,7 @@ export default function Footer() {
               <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>
                   <MDBIcon icon="gem" className="me-3" />
-                  SakuraKimono
+                  SakuraKimonos
                 </h6>
                 <p>
                 Sakura Kimonos is a website for the sale of Kimonos  inspired by the traditional Japanese garment.
@@ -94,11 +93,14 @@ export default function Footer() {
                 <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                 <p>
                   <MDBIcon icon="home" className="me-2" />
-                  Sevilla, Sv 41002, SP
+                  Sevilla, 41002, Spain
                 </p>
                 <p>
-                  <MDBIcon icon="envelope" className="me-3" />
-                  SakuraKimonos@gmail.com
+                  <MDBIcon icon="envelope"   className="me-3" />
+                   <a href='/ContactUs' className='text-reset'>
+                   contact@sakurakimonos.com
+                   </a> 
+                  
                 </p>
                 <p>
                   <MDBIcon icon="phone" className="me-3" /> + 034 956 142 818
@@ -114,7 +116,7 @@ export default function Footer() {
         <div className='text-white text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
           © 2023 Copyright:
           <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-            KasuraKimonos.com
+           SakuraKimonos.com
           </a>
         </div>
       </MDBFooter>

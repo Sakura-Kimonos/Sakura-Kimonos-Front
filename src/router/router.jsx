@@ -2,15 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import Root from "./Root";
 import Home from '../pages/Home';
-// import AddProduct from '../pages/AddProduct';
-// import NotFound from "../pages/NotFound";
+import AddProduct from '../pages/AddProduct';
+import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
-
+import ContactUs from '../pages/ContactUs';
 
 // import EditProduct from "../pages/EditProduct"
 
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     { 
         path: '/',
         element: < Root/>,
-        // errorElement: <NotFound />, 
+        errorElement: <NotFound />, 
       
                 children: [
                     {
@@ -31,13 +31,13 @@ export const router = createBrowserRouter([
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,
-                    //     // loader: loaderCardUser,
+                    //     loader: loaderCardUser,
                     // }, 
-                    // {
-                    //     path: '/addProduct',
-                    //     element: <AddProduct />,
-                    //     // loader: loaderCardUser
-                    // }, 
+                    {
+                        path: '/AddProduct',
+                        element: <AddProduct />,
+                        // loader: loaderCardUser
+                    }, 
                     // {
                     //     path: '/join',
                     //     element: <Join />,
@@ -58,6 +58,12 @@ export const router = createBrowserRouter([
                         element: <AdmDashboard />,
                         loader: loaderAdvertisement,
                     },  
+                    {
+                        path: '/contactUs',
+                        element: <ContactUs />,
+                        loader: loaderAdvertisement,
+                    },  
+
                     // {
                     //     path: '/cart',
                     //     element: <ShoppingCart />,

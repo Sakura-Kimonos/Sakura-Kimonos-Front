@@ -102,6 +102,12 @@ function SideBar() {
             {!collapsed && <span className="sidebar-text"> Sleepwear </span>}
           </a>
         </li>
+        <li>
+          <a href="#">
+            <BsCart3 className="sidebar-icon" />
+            {!collapsed && <span className="sidebar-text"> Shopping Cart </span>}
+          </a>
+        </li>
         </div>
         <div className="second-block"> 
         <li>

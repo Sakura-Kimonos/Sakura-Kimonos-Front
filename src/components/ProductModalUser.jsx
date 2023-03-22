@@ -20,7 +20,7 @@ const ProductModalUser = ({ show, handleClose, product }) => {
                   <div id="modal" className="modal-body" style={{ width: '100%'}} border="light">
                         <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> <img variant="top" style={{width: '350px'}} src={product.img} /> </div>
                            <p className='text-center' style={{marginTop: '20px'}}>  {product.description}  </p>
-                           <h4 className='text-center' style={{marginTop: '20px'}}>  {product.price}€ </h4>
+                           <h4 className='text-center' style={{marginTop: '20px'}}>  {product.price}$ </h4>
                         
                            <Table striped bordered hover>
                               <tbody>

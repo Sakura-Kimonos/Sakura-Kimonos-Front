@@ -1,3 +1,8 @@
+#root {
+    height: 100vh;
+    position: relative;
+}
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -36,7 +41,7 @@
     background-color: #85BBA8;
     color: white;
     text-align: center;
-    
+
 
 }
 

@@ -28,17 +28,11 @@ const Home = () => {
                     </ul>
                 </nav>
                 <Slide/>
-            <div className="trending">
                 <Trending products={products}/>
-            </div>
-            <div id="our-vision"> 
                 <OurVision />
-            </div>
-            <div id="our-services"> 
                 <PreviousFooter />
-            </div>
-        </section>
-    </>
+            </section>
+        </>
     )
 };
 

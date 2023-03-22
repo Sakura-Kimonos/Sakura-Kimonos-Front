@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {  useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
-import {BsSearchHeart, BsCart3, BsPencilSquare} from 'react-icons/bs';
+import {BsSearchHeart,  BsPencilSquare, BsTrash} from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
 import SideBar from '../components/SideBar';
 
@@ -52,9 +52,10 @@ function Dashboard() {
                 <Card.Img variant="top" src={product.img}  />
                 <Card.Body className='text-center'>
                 <Card.Title>{product.title} </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{product.price}</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                 <Button variant="light"><BsSearchHeart/> View </Button>
                 <Button variant="light"><BsPencilSquare/> Edit </Button>
+                <Button variant="light"><BsTrash/> Delete </Button>
                 </Card.Body>
                 </Card>
               )
@@ -67,24 +68,6 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import CardsUser from '../components/CardsUser';
 
