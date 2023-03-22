@@ -99,7 +99,7 @@ export default function Footer() {
                 <p>
                   <MDBIcon icon="envelope"   className="me-3" />
                    <a href='/ContactUs' className='text-reset'>
-                  SakuraKimonos@gmail.com
+                 contact@sakurakimonos.com
                    </a> 
                   
                 </p>
