@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import Root from "./Root";
 import Home from '../pages/Home';
-import Form from '../pages/Form';
+import AddProduct from '../pages/AddProduct';
 import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
@@ -34,8 +34,8 @@ export const router = createBrowserRouter([
                     //     // loader: loaderCardUser,
                     // }, 
                     {
-                        path: '/form',
-                        element: <Form />,
+                        path: '/AddProduct',
+                        element: <AddProduct />,
                         // loader: loaderCardUser
                     }, 
                     // {
