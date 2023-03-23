@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MDBNavbar, MDBContainer, MDBNavbarBrand, MDBNavbarToggler, MDBNavbarItem, MDBNavbarLink, MDBCollapse, MDBIcon, MDBNavbarNav, } from 'mdb-react-ui-kit';
 import Logo from '../assets/LogoSakura1.png';
 import {BsFillCartFill} from "react-icons/bs";
+import './styleSheet/Navbar.css'
 
 export default function App() {
   const [showNavCentred, setShowNavCentred] = useState(false);
@@ -22,21 +23,22 @@ export default function App() {
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
           <MDBCollapse navbar show={showNavCentred}>
-            <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-              <MDBNavbarItem>
-                <MDBNavbarLink  text-center text-md-start mt-5 active aria-current='page' className='text-white d-flex justify-content-center justify-content-lg-between p-4 ' href='/'>HOME</MDBNavbarLink>
+            <MDBNavbarNav className='ms-auto mb-2 mb-lg-0'>
+
+              <MDBNavbarItem className='ms-auto mb-2 mb-lg-0'>
+                <MDBNavbarLink  text-center text-md-start mt-5 active aria-current='page' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item' href='/'>HOME</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/userDashboard' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>PRODUCTS</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/userDashboard' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'>PRODUCTS</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/join' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>JOIN</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/join' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'>JOIN</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/login' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>LOGIN</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/login' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item '>LOGIN</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/cart' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '><BsFillCartFill/></MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/cart' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'><BsFillCartFill/></MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
             
