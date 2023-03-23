@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
-//import  ShoppingCart  from "../pages/ShoppingCart";
+
 
 function Root() {
    // const [allProducts, setAllProducts] = useState([]);
@@ -9,7 +9,6 @@ function Root() {
 
     return (
         <>
-            
             <Outlet />
         
             <Footer />

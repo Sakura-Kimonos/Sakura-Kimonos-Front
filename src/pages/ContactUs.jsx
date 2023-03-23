@@ -32,7 +32,7 @@ function ContactForm() {
           <textarea
             value={message}
             onChange={handleTextareaChange}
-            placeholder="Write your message here"
+            placeholder="   Write your message here"
           />
         </label>
         <button className="btn btn-primary" id="btn-ad" type="submit">
