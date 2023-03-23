@@ -109,6 +109,30 @@
       "season": "Spring",
       "pattern": "Flowers",
       "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/light-blue-kimono-for-women-s-276_5000x.jpg?v=1619723021"
+    },
+    {
+      "id": 11,
+      "title": "Diana Romero",
+      "price": "diana.romecoy@gmail.com",
+      "description": "123456",
+      "img": "",
+      "units": "",
+      "material": "2023-03-23",
+      "pattern": "jj",
+      "category": "",
+      "season": ""
+    },
+    {
+      "id": 12,
+      "title": "Diana Romero",
+      "price": "diana.romecoy@gmail.com",
+      "description": "123456",
+      "img": "",
+      "units": "",
+      "material": "2023-03-23",
+      "pattern": "625258080",
+      "category": "",
+      "season": ""
     }
   ]
 }

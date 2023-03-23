@@ -1,8 +1,8 @@
-import "./styleSheetPages/AddProduct.css"
+
 import { useState } from 'react';
 import { productHandler } from '../handlers/productHandler';
 import SideBar from '../components/SideBar';
-// import { Modal } from 'react-bootstrap';
+
 
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
