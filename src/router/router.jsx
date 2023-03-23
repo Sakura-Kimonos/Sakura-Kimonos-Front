@@ -29,9 +29,9 @@ export const router = createBrowserRouter([
                         loader: loaderAdvertisement,
                     },
                     {
-                        path: '/cart',
+                        path: '/ShoppingCart/:CartId',
                         element: <ShoppingCart />,
-                        loader: loaderCardUser,
+                       //loader: loaderCardUser,
                     },
                     
                     //{

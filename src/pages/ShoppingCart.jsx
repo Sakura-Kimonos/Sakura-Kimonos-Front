@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard,
+    MDBCardBody,
+    MDBCardImage, MDBIcon,
+    MDBInput, MDBTypography, } from 'mdb-react-ui-kit';
 import CartItem from '../components/CartItem';
 
 
@@ -14,13 +17,43 @@ const removeItem = item => {
     setItems(prevItems => prevItems.filter(i => i.id !== item.id));
     };
 
-  const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
 
     return (
-        <MDBContainer>
-        <MDBRow>
-            <MDBCol md='12'>
+        <section className="h-100" style={{ backgroundColor: "#fdccbc" }}>
+        <MDBContainer className="h-100" >
+        <MDBRow className="justify-content-center align-items-center h-100">
+            <p>
+                <span className="h2">Shopping Cart </span>
+                <span className="h4">(1 item in your cart)</span>
+            </p>
+
+
+
+
+
+
+
+
+
+
+        
+            <MDBCol>
+            <div className="d-flex justify-content-between align-items-center h-100">
+          <MDBTypography tag="h3" className="fw-normal mb-0 text-black">
+            Shopping Cart
+          </MDBTypography>
+          <div>
+            <p className="mb-0">
+              <span className="text-muted">Sort by:</span>
+              <a href="#!" className="text-body">
+                price <i className="fas fa-angle-down mt-1"></i>
+              </a>
+            </p>
+          </div>
+        </div> 
+
             {items.map(item => (
             <CartItem key={item.id} item={item} removeItem={removeItem} />
             ))}
@@ -33,6 +66,7 @@ const removeItem = item => {
         </MDBCol>
     </MDBRow>
     </MDBContainer>
+    </section>
     );
 };
 

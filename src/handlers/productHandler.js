@@ -14,7 +14,7 @@ export const productHandler = {
             "units": newProduct.units,
             "user": newProduct.user,
             "location": newProduct.location,
-             "img": newProduct.img,
+            "img": newProduct.img,
         }
 
         return productService.submitProduct(newProductStructure);
@@ -41,9 +41,9 @@ export const productHandler = {
             "units": updatedProduct.units,
             "user": updatedProduct.user,
             "location": updatedProduct.location,
-           "img" : updatedProduct.img,
+            "img" : updatedProduct.img,
         }
-       
+    
 
         return productService.updateProduct(id, updatedProductStructure);
     }

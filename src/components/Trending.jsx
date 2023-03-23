@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BsSearchHeart, BsCart3 } from 'react-icons/bs';
 import './styleSheet/Trending.css';
+import { Link } from 'react-router-dom'
 
 
 function Trending({ products, deleteProduct }) {
@@ -22,9 +23,10 @@ function Trending({ products, deleteProduct }) {
                 <Button variant="light">
                   <BsSearchHeart /> View
                 </Button>
+                <Link to={`/ShoppingCart/${product.id}`}>
                 <Button variant="light">
                   <BsCart3 /> Add to cart
-                </Button>
+                </Button></Link>
               </Card.Body>
               {/* <Link to={`/userDashboard/${product.id}`}>
                 <Button className="btn-ad" id="btn-edit">

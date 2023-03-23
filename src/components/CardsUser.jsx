@@ -1,11 +1,19 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const CardUser = () => {
   const { CardUser } = useLoaderData();
+
+/*const ProductList = ({ allProducts, setAllProducts}) => {
+  const onAddProduct = () => {
+          console.log('add');
+  }
+  };*/
+ /* onClick={() => onAddProduct(product)}*/
+
 
 return (
   <Card border="light" style={{ width: '18rem' }}>
@@ -18,10 +26,13 @@ return (
   //           bulk of the card's content.
   //         </Card.Text> */}
          <Button variant="light"><BsSearchHeart/> View </Button>
-           <Button variant="light"><BsCart3/> Add to cart </Button>
+           <Link to="/ShoppingCart">
+           <Button  variant="light" ><BsCart3/> Add to cart </Button>
+           </Link>
         </Card.Body>
        </Card>
 )
+
 };
   export default CardUser;
 
