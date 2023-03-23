@@ -13,6 +13,9 @@ import {
   
 } from 'mdb-react-ui-kit';
 
+import Logo from '../assets/LogoSakura1.png';
+import {BsFillCartFill} from "react-icons/bs";
+
 export default function App() {
   const [showNavNoTogglerSecond, setShowNavNoTogglerSecond] = useState(false);
 
@@ -20,7 +23,7 @@ export default function App() {
     <>
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
+          <MDBNavbarBrand href='/'><img src={Logo} alt="Sakura-Kimonos"className='Logo'/></MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
             data-target='#navbarTogglerDemo02'
@@ -34,17 +37,19 @@ export default function App() {
           <MDBCollapse navbar show={showNavNoTogglerSecond}>
             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='#'>
-                  Home
-                </MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/'>HOME</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/userDashboard'>PRODUCTS</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
-                  Disabled
-                </MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/join'>JOIN</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink active aria-current='page' href='/login'>LOGIN</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink active aria-current='page' href='/cart'><BsFillCartFill/></MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
             
