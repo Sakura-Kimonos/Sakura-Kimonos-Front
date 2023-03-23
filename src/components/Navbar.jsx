@@ -1,28 +1,15 @@
 import React, { useState } from 'react';
-import {
-  MDBNavbar,
-  MDBContainer,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBCollapse,
- 
-  MDBIcon,
-  MDBNavbarNav,
-  
-} from 'mdb-react-ui-kit';
-
+import { MDBNavbar, MDBContainer, MDBNavbarBrand, MDBNavbarToggler, MDBNavbarItem, MDBNavbarLink, MDBCollapse, MDBIcon, MDBNavbarNav, } from 'mdb-react-ui-kit';
 import Logo from '../assets/LogoSakura1.png';
 import {BsFillCartFill} from "react-icons/bs";
 
 export default function App() {
-  const [showNavNoTogglerSecond, setShowNavNoTogglerSecond] = useState(false);
+  const [showNavCentred, setShowNavCentred] = useState(false);
 
   return (
     <>
-      <MDBNavbar expand='lg' light bgColor='light'>
-        <MDBContainer fluid>
+      <MDBNavbar expand='lg'  style={{  backgroundColor: "#CB5F5F", position: "float", bottom: 0 }} >
+        <MDBContainer fluid >
           <MDBNavbarBrand href='/'><img src={Logo} alt="Sakura-Kimonos"className='Logo'/></MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
@@ -30,26 +17,26 @@ export default function App() {
             aria-controls='navbarTogglerDemo02'
             aria-expanded='false'
             aria-label='Toggle navigation'
-            onClick={() => setShowNavNoTogglerSecond(!showNavNoTogglerSecond)}
+            onClick={() => setShowNavCentred(!showNavCentred)}
           >
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
-          <MDBCollapse navbar show={showNavNoTogglerSecond}>
+          <MDBCollapse navbar show={showNavCentred}>
             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/'>HOME</MDBNavbarLink>
+                <MDBNavbarLink  text-center text-md-start mt-5 active aria-current='page' className='text-white d-flex justify-content-center justify-content-lg-between p-4 ' href='/'>HOME</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/userDashboard'>PRODUCTS</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/userDashboard' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>PRODUCTS</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/join'>JOIN</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/join' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>JOIN</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/login'>LOGIN</MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/login' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '>LOGIN</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/cart'><BsFillCartFill/></MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/cart' className='text-white d-flex justify-content-center justify-content-lg-between p-4 '><BsFillCartFill/></MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
             

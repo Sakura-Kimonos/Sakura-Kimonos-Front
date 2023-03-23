@@ -1,5 +1,6 @@
 import { useRouteError, Link } from "react-router-dom";
 import './styleSheetPages/NotFound.css'
+import SakuraAnimation from "../components/SakuraAnimation";
 
 
 
@@ -16,6 +17,7 @@ const NotFound = () => {
 
         <Link to="/">Please click here to return to the home page</Link>
         <br></br>
+        <SakuraAnimation /> 
         <img src="src/assets/LogoSakura1.png" alt="logo" />
       </div>
     );

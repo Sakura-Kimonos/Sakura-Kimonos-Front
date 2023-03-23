@@ -9,24 +9,13 @@ import PreviousFooter from '../components/PreviousFooter';
 
 
 
+
 const Home = () => {
     const {products}  = useLoaderData();
     return (
     <>
         <section className="hero">
                 <Navbar />
-                {/* <nav className="subnav d-flex justify-content-center justify-content-lg-center flex-wrap align-items-center">
-                    <Link to='#last-products' smooth> LAST PRODUCTS </Link>
-                    <Link to='#our-vision'smooth> OUR VISION </Link>   
-                    <Link to='#our-services' smooth> OUR SERVICES </Link> 
-                </nav> */}
-                <nav className="subnav d-flex justify-content-center justify-content-lg-center flex-wrap align-items-center">
-                    <ul> 
-                        <li> LAST PRODUCTS </li>
-                        <li> OUR VISION </li>
-                        <li> OUR SERVICES </li>
-                    </ul>
-                </nav>
                 <Slide/>
                 <Trending products={products}/>
                 <OurVision />
