@@ -24,6 +24,9 @@ export default function App() {
           </MDBNavbarToggler>
           <MDBCollapse navbar show={showNavCentred}>
             <MDBNavbarNav className='ms-auto mb-2 mb-lg-0'>
+
+              <MDBNavbarItem className='ms-auto mb-2 mb-lg-0'>
+              </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink active aria-current='page' href='/' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'>HOME</MDBNavbarLink>
               </MDBNavbarItem>
