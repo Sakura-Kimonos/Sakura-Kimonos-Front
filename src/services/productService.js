@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:3000/Products',
+    baseURL: 'https://localhost:7021',
     withCredentials: false,
     headers: {
       Accept: 'application/json',
@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export const productService = {
     async getProducts() {
-        let response = await apiClient.get("/");
+        let response = await apiClient.get("/Product/GetAllProducts");
         if (!response==200)
             throw {
                 status: response.status,
@@ -22,7 +22,7 @@ export const productService = {
         return allProducts;
     },
     async getProduct(id) {
-        let response = await apiClient.get("/" + id);
+        let response = await apiClient.get("/Product/GetProductById" + id);
         if (!response==200)
         throw {
             status: response.status,
@@ -32,13 +32,13 @@ export const productService = {
         return product;
     },
     async submitProduct(newProduct){
-        await apiClient.post("/", newProduct)
+        await apiClient.post("/Product/AddProduct", newProduct)
     },
     async deleteProduct(id){
-        await apiClient.delete("/" + id)
+        await apiClient.delete("/Product/Delete" + id)
     },
     async updateProduct(id, updatedProduct){
-        await apiClient.patch("/" + id, updatedProduct)
+        await apiClient.patch("/Product/Patch" + id, updatedProduct)
     }
 }
 
