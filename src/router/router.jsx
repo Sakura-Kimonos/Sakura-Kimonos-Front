@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import Root from "./Root";
 import Home from '../pages/Home';
-import AddProduct from '../pages/AddProduct';
-import NotFound from "../pages/NotFound";
+// import AddProduct from '../pages/AddProduct';
+// import NotFound from "../pages/NotFound";
 // import Join from "../pages/Join";
 // import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
@@ -20,8 +20,8 @@ export const router = createBrowserRouter([
     { 
         path: '/',
         element: < Root/>,
-        errorElement: <NotFound />, 
-      
+        // errorElement: <NotFound />, 
+
                 children: [
                     {
                         index: true,
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
                     {
                         path: '/ShoppingCart/:CartId',
                         element: <ShoppingCart />,
-                       //loader: loaderCardUser,
+                       // loader: loaderCardUser,
                     },
                     
                     //{
@@ -44,16 +44,7 @@ export const router = createBrowserRouter([
                     //     path: '/addProduct',
                     //     element: <AddProduct />,
                     //     // loader: loaderCardUser
-                    // {
-                    //     path: '/cart',
-                    //     element: <ShoppingCart />,
-                    //     loader: loaderCardUser,
                     // }, 
-                    {
-                        path: '/AddProduct',
-                        element: <AddProduct />,
-                        // loader: loaderCardUser
-                    }, 
                     // {
                     //     path: '/join',
                     //     element: <Join />,
@@ -97,11 +88,11 @@ export const router = createBrowserRouter([
                         path: '/CookiesPolicy',
                         element:<CookiesPolicy/>
                         
-                     },
+                    },
                 
                 ]
             },
-         
+        
     //     ]
     // },   
 ]);
@@ -110,11 +101,11 @@ async function loaderCardUser  ({ params })  {
     const CardUser = await productHandler.loadProduct(params.id)  
     return { CardUser };
 
-  
+
 };
 
 async function loaderAdvertisement () {
- const products = await productHandler.loadProducts()
+    const products = await productHandler.loadProducts()
     return { products };
- };
+    };
 

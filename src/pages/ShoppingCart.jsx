@@ -26,16 +26,8 @@ const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
         <MDBRow className="justify-content-center align-items-center h-100">
             <p>
                 <span className="h2">Shopping Cart </span>
-                <span className="h4">(1 item in your cart)</span>
+                <span className="h4">()</span>
             </p>
-
-
-
-
-
-
-
-
 
 
         

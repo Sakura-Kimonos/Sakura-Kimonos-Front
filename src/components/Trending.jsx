@@ -5,7 +5,7 @@ import { BsSearchHeart, BsCart3 } from 'react-icons/bs';
 import './styleSheet/Trending.css';
 import React, {useState} from 'react';
 import ProductModalUser from './ProductModalUser'; 
-
+import { Link } from 'react-router-dom';
 
 
 function Trending({ products}) {
@@ -24,7 +24,7 @@ function Trending({ products}) {
   return (
     <>
     <div className="cards row justify-content-center">
-       <h2 id="last-products"className="title">LAST PRODUCTS</h2>
+      <h2 id="last-products"className="title">LAST PRODUCTS</h2>
       {productList.map((product) => {
         return (
           <>
@@ -38,9 +38,10 @@ function Trending({ products}) {
                     <Button variant="light" onClick={() => handleShow(product.id)}>
                       <BsSearchHeart /> View
                     </Button>
-                    <Button variant="light">
+                    <Link to={`/ShoppingCart/${product.id}`}>
+                      <Button variant="light">
                       <BsCart3 /> Add to cart
-                    </Button>
+                    </Button></Link>
                   </Card.Body>
                 </Card>
               </div>
