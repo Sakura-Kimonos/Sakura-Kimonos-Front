@@ -1,5 +1,4 @@
 import "./styleSheetPages/Home.css"
-import '../components/styleSheet/SubNavbar.css';
 import Navbar from '../components/Navbar.jsx'
 import Slide from '../components/Slide';
 import OurVision from "../components/OurVision";
