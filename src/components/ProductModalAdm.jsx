@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import {BsPencilSquare, BsTrash } from 'react-icons/bs';
 import Button from "react-bootstrap/Button";
@@ -10,7 +9,7 @@ import Button from "react-bootstrap/Button";
 
 
 const ProductModalAdm = ({ show, handleClose, product }) => {
-  // console.log(product)
+ 
   return (
     <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
       <Modal.Header closeButton>

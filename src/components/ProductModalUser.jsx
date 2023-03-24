@@ -1,16 +1,15 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import {BsCart3} from 'react-icons/bs';
 import Button from "react-bootstrap/Button";
-
+import './styleSheet/ProductModalUser.css'
 
 
 
 
 const ProductModalUser = ({ show, handleClose, product }) => {
-  // console.log(product)
+  
   return (
     <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
       <Modal.Header closeButton>

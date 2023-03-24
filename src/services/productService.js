@@ -1,11 +1,12 @@
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7021',
     withCredentials: false,
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
     }
 })
 
@@ -32,7 +33,17 @@ export const productService = {
         return product;
     },
     async submitProduct(newProduct){
-        await apiClient.post("/Product/AddProduct", newProduct)
+        let response = await apiClient.post("/Product/AddProduct", newProduct)
+        if (response.status === 201) 
+        { 
+            Swal.fire({ 
+            icon: 'success', 
+            title: 'New product added', 
+            showConfirmButton: true, 
+            showClass: { popup: 'animate__animated animate__fadeInDown' }, 
+            hideClass: { popup: 'animate__animated animate__fadeOutUp' } })   
+         }
+
     },
     async deleteProduct(id){
         await apiClient.delete("/Product/Delete" + id)
