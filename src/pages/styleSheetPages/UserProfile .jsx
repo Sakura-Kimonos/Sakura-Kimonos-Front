@@ -1,10 +1,9 @@
-
 import { useState } from 'react';
-// import { jointHandler } from '../handlers/joinHandler';
+// import { userHandler } from '../handlers/userHandler';
 import SideBar from '../components/SideBar';
-import './styleSheetPages/Join.css';
+import './styleSheetPages/User.css';
 
-const CreateJoin = () => {
+const CreateUser= () => {
 
   const [name, setName] = useState("");
   const [e_Mail, setE_Mail] = useState("");
@@ -98,4 +97,4 @@ const CreateJoin = () => {
   </>
   );
 };
-export default CreateJoin;
+export default CreateUser;
