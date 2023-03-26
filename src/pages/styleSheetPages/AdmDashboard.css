@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-margin-bottom: 0%;
+    margin-bottom: 0%;
 }
 
 .card {
@@ -36,7 +36,7 @@ margin-bottom: 0%;
     background-color: #85BBA8;
     color: white;
     text-align: center;
-    
+
 
 }
 
@@ -55,6 +55,29 @@ margin-bottom: 0%;
     position: sticky;
     top: .5rem;
     margin-left: 5rem;
+}
+
+
+.my-modal {
+    /* background-color: #fff; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.my-button {
+    margin-right: 10px;
+    border: none;
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.my-button:hover {
+    background-color: #c82333;
 }
 
 @media (max-width: 414px) {
