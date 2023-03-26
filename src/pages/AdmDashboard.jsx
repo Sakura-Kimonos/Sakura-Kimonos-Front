@@ -66,7 +66,7 @@ function Dashboard() {
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                       <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart /> View </Button>
                       <Button variant="light"><BsPencilSquare/> Edit </Button>
-                      <Button variant="light"><BsTrash/> Delete </Button>
+                      <Button variant="light" onClick={() =>deleteProduct(product.id)}><BsTrash/> Delete </Button>
                     </Card.Body>
                   </Card>
                 </>

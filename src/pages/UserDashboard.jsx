@@ -24,10 +24,6 @@ function Dashboard() {
   const data = productsData.filter((product) => {
     return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
   });
-  const deleteProduct = async (id) => {
-    await productHandler.deleteProduct(id);
-    setProductsData(productsData.filter(post => post.id !== id))
-}
 
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
