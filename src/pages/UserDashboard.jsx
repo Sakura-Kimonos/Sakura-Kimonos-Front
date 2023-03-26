@@ -14,17 +14,16 @@ import ProductModalUser from '../components/ProductModalUser';
 
 function Dashboard() {
 
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
+  
   const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
   const [searchQuery, setSearchQuery] = useState("");
-  const data = productsData.filter(
-    (product) =>
-      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.price.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  const data = productsData.filter((product) => {
+    return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
+  });
   const deleteProduct = async (id) => {
     await productHandler.deleteProduct(id);
     setProductsData(productsData.filter(post => post.id !== id))

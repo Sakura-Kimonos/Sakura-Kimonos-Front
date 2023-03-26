@@ -2,7 +2,7 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:3000/Products',
+    baseURL: 'https://localhost:7021',
     withCredentials: false,
     headers: {
         Accept: 'application/json',
@@ -12,8 +12,8 @@ const apiClient = axios.create({
 
 export const productService = {
     async getProducts() {
-        let response = await apiClient.get("/");
-        if (!response == 200)
+        let response = await apiClient.get("/Product/GetAllProducts");
+        if (!response==200)
             throw {
                 status: response.status,
                 statusText: "Not found",
@@ -23,17 +23,17 @@ export const productService = {
         return allProducts;
     },
     async getProduct(id) {
-        let response = await apiClient.get("/" + id);
-        if (!response == 200)
-            throw {
-                status: response.status,
-                statusText: "Not found",
-            };
+        let response = await apiClient.get("/Product/GetProductById" + id);
+        if (!response==200)
+        throw {
+            status: response.status,
+            statusText: "Not found",
+        };
         let product = response.data;
         return product;
     },
-    async submitProduct(newProduct) {
-        let response = await apiClient.post("/", newProduct);
+    async submitProduct(newProduct){
+        let response = await apiClient.post("/Product/AddProduct", newProduct)
         if (response.status === 201) 
         { 
             Swal.fire({ 
@@ -45,11 +45,11 @@ export const productService = {
          }
 
     },
-    async deleteProduct(id) {
-        await apiClient.delete("/" + id)
+    async deleteProduct(id){
+        await apiClient.delete("/Product/Delete" + id)
     },
-    async updateProduct(id, updatedProduct) {
-        await apiClient.patch("/" + id, updatedProduct)
+    async updateProduct(id, updatedProduct){
+        await apiClient.patch("/Product/Patch" + id, updatedProduct)
     }
 }
 

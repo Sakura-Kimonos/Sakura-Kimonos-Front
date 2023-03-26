@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
-import { BsSearchHeart, BsCart3, BsTrash } from 'react-icons/bs';
+import { BsSearchHeart, BsPencilSquare, BsTrash } from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
 import SideBar from '../components/SideBar';
 import ProductModalAdm from "../components/ProductModalAdm";
@@ -12,17 +12,16 @@ import ButtonNewProduct from '../components/ButtonNewProduct';
 
 function Dashboard() {
 
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
+
   const { products } = useLoaderData();
   const [productsData, setProductsData] = useState(products);
   const [searchQuery, setSearchQuery] = useState("");
-  const data = productsData.filter(
-    (product) =>
-      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.price.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+ };
+  const data = productsData.filter((product) => {
+    return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
+  });
   const deleteProduct = async (id) => {
     await productHandler.deleteProduct(id);
     setProductsData(productsData.filter(post => post.id !== id))
@@ -66,9 +65,8 @@ function Dashboard() {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                       <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart /> View </Button>
-                      <Button variant="light"><BsCart3 /> Add to cart </Button>
-                      <Button variant="light"><BsTrash /> Delete </Button>
-
+                      <Button variant="light"><BsPencilSquare/> Edit </Button>
+                      <Button variant="light"><BsTrash/> Delete </Button>
                     </Card.Body>
                   </Card>
                 </>
