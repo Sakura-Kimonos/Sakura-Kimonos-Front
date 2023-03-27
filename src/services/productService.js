@@ -5,21 +5,20 @@ const apiClient = axios.create({
     baseURL: 'https://localhost:7021',
     withCredentials: false,
     headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'   
     }
 })
 
 export const productService = {
     async getProducts() {
-        let response = await apiClient.get("/Product/GetAllProducts");
+        let response = await apiClient.get("/Product/GetAllProduct");
         if (!response==200)
-            throw {
-                status: response.status,
-                statusText: "Not found",
+            {
+                alert('Hubo un error al traer los productos');
             };
         let allProducts = response.data;
-
+       
         return allProducts;
     },
     async getProduct(id) {
@@ -32,9 +31,9 @@ export const productService = {
         let product = response.data;
         return product;
     },
-    async submitProduct(newProduct){
-        let response = await apiClient.post("/Product/AddProduct", newProduct)
-        if (response.status === 201) 
+    async submitProduct(newProductRequestModel){
+        let response = await apiClient.post("/Product/AddProduct", newProductRequestModel)
+        if (response.status === 200) 
         { 
             Swal.fire({ 
             icon: 'success', 
@@ -42,14 +41,16 @@ export const productService = {
             showConfirmButton: true, 
             showClass: { popup: 'animate__animated animate__fadeInDown' }, 
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })   
+         } else { 
+            alert("Upsi...");
          }
 
     },
     async deleteProduct(id){
         await apiClient.delete("/Product/Delete" + id)
     },
-    async updateProduct(id, updatedProduct){
-        await apiClient.patch("/Product/Patch" + id, updatedProduct)
+    async updateProduct(id, updatedProductRequestModel){
+        await apiClient.patch("/Product/Patch" + id, updatedProductRequestModel)
     }
 }
 

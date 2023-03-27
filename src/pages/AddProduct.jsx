@@ -6,10 +6,10 @@ import SideBar from '../components/SideBar';
 
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState(null);
+  const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
-  const [img, setImg] = useState("");
-  const [units, setUnits] = useState("");
+  const [img, setImg] = useState(null);
+  const [units, setUnits] = useState(0);
   const [material, setMaterial] = useState("");
   const [pattern, setPattern] = useState("");
   const [category, setCategory] = useState("");
@@ -17,36 +17,33 @@ const CreateProduct = () => {
   let [newProduct, setNewProduct] = useState({});
 
   const handleTitleChange = (event) => {
-    let titleInput = event.target.value;
-    setTitle(titleInput);
+    setTitle(event.target.value);
   };
   const handlePriceChange = (event) => {
-    let priceInput = event.target.value;
-    setPrice(priceInput);
+    setPrice(event.target.value);
   };
   const handleDescriptionChange = (event) => {
-    let descriptionInput = event.target.value;
-    setDescription(descriptionInput);
+    setDescription(event.target.value);
   };
 
   const handleMaterialChange = (event) => {
-    let materialInput = event.target.value;
-    setMaterial(materialInput);
+    setMaterial(event.target.value);
   };
 
-  const handlPatternChange = (event) => {
-    let patternInput = event.target.value;
-    setPattern(patternInput);
+  const handlePatternChange = (event) => {
+    setPattern(event.target.value);
   };
 
-  const handlCategoryChange = (event) => {
-    let categoryInput = event.target.value;
-    setCategory(categoryInput);
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
   };
 
-  const handlSeasonChange = (event) => {
-    let seasonInput = event.target.value;
-    setSeason(seasonInput);
+  const handleSeasonChange = (event) => {
+    setSeason(event.target.value);
+  };
+
+  const handleUnitsChange = (event) => {
+    setUnits(event.target.value);
   };
 
   const handleImgChange = (event) => {
@@ -57,15 +54,10 @@ const CreateProduct = () => {
       setImg(reader.result)
     };
   };
-  const handleUnitsChange = (event) => {
-    let unitsInput = event.target.value;
-    setUnits(unitsInput);
-  };
 
   const handleSubmit = (event) => {
-    console.log(newProduct)
     event.preventDefault();
-    newProduct = { title, description, price, img, units, material, pattern, category, season };
+    let newProduct = { title, description, price, img, units, material, pattern, category, season };
     productHandler.addProduct(newProduct);
     event.target.reset()
   };
@@ -78,7 +70,7 @@ const CreateProduct = () => {
     <>
       <SideBar />
       <div className="container-form">
-        <form onSubmit={handleSubmit} itemID="form1">
+        <form onSubmit={handleSubmit} itemID="form1" enctype="multipart/form-data">
           <h1>Create a new product</h1>
 
           <div className="mb-3">
@@ -103,17 +95,17 @@ const CreateProduct = () => {
 
           <div className="mb-3">
             <label className="form-label" htmlFor="pattern">Pattern</label>
-            <input name="pattern" type="text" className="form-control" id="input-pattern" required placeholder="Type of pattern." onChange={handlPatternChange} />
+            <input name="pattern" type="text" className="form-control" id="input-pattern" required placeholder="Type of pattern." onChange={handlePatternChange} />
           </div>
 
           <div className="mb-3">
             <label className="form-label" htmlFor="category">Category</label>
-            <input name="category" type="text" className="form-control" id="input-category" required placeholder="What is the category?" onChange={handlCategoryChange} />
+            <input name="category" type="text" className="form-control" id="input-category" required placeholder="What is the category?" onChange={handleCategoryChange} />
           </div>
 
           <div className="mb-3">
             <label className="form-label" htmlFor="season">Season</label>
-            <input name="season" type="text" className="form-control" id="input-season" required placeholder="What is the season?" onChange={handlSeasonChange} />
+            <input name="season" type="text" className="form-control" id="input-season" required placeholder="What is the season?" onChange={handleSeasonChange} />
           </div>
 
           <div className="mb-3">

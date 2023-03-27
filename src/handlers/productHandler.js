@@ -6,25 +6,35 @@ export const productHandler = {
             return;
         }
 
-        let newProductStructure = {
-            "id": "",
-            "title": newProduct.title,
-            "price": newProduct.price,
-            "description": newProduct.description,
-            "img": newProduct.img,
-            "units": newProduct.units,
-            "material": newProduct.material,
-            "pattern": newProduct.pattern,
-            "category": newProduct.category,
-            "season": newProduct.season,
+        let imgStringData = newProduct.img;
+        let imgStringDataSplit = imgStringData.split(',');
+        let imgContent = imgStringDataSplit[1];
+
+        let newProductRequestModel = {
+            "productData": {
+                "title": newProduct.title,
+                "description": newProduct.description,
+                "price": newProduct.price,
+                "category": newProduct.category,
+                "material": newProduct.material,
+                "season": newProduct.season,
+                "pattern": newProduct.pattern,
+                "units": newProduct.units,
+            }, 
+            "fileData": {
+                "fileName": newProduct.title + "-Photo",
+                "base64FileContent": imgContent
+            }
+           
         }
 
-        return productService.submitProduct(newProductStructure);
+        return productService.submitProduct(newProductRequestModel);
 
     },
 
-    loadProducts() {
-        return productService.getProducts();
+    async loadProducts() {
+        var result = await  productService.getProducts();
+        return result; 
     },
     loadProduct(id) {
         return productService.getProduct(id);
@@ -36,19 +46,29 @@ export const productHandler = {
         if (!updatedProduct) {
             return;
         }
-        let updatedProductStructure = {
-            "title": updatedProduct.title,
-            "price": updatedProduct.price,
-            "description": updatedProduct.description,
-            "img": updatedProduct.img,
-            "units": updatedProduct.units,
-            "material": updatedProduct.material,
-            "pattern": updatedProduct.pattern,
-            "category": updatedProduct.category,
-            "season": updatedProduct.season,
+
+        let imgStringData = updatedProduct.img;
+        let imgStringDataSplit = imgStringData.split(',');
+        let imgContent = imgStringDataSplit[1];
+
+        let updatedProductRequestModel = {
+            "productData": {
+                "title": updatedProduct.title,
+                "description": updatedProduct.description,
+                "price": updatedProduct.price,
+                "category": updatedProduct.category,
+                "material": updatedProduct.material,
+                "season": updatedProduct.season,
+                "pattern": updatedProduct.pattern,
+                "units": updatedProduct.units,
+            }, 
+            "fileData": {
+                "fileName": updatedProduct.title + "-Photo",
+                "base64FileContent": imgContent
+            }
         }
 
-        return productService.updateProduct(id, updatedProductStructure);
+        return productService.updateProduct(id, updatedProductRequestModel);
     }
 }
 

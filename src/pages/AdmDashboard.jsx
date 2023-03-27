@@ -9,6 +9,8 @@ import '../pages/styleSheetPages/AdmDashboard.css'
 import SideBar from '../components/SideBar';
 import ProductModalAdm from "../components/ProductModalAdm";
 import ButtonNewProduct from '../components/ButtonNewProduct';
+import EditProduct from "../components/EditProduct";
+
 
 function Dashboard() {
 
@@ -22,6 +24,7 @@ function Dashboard() {
   const data = productsData.filter((product) => {
     return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
   });
+
   const deleteProduct = async (id) => {
     await productHandler.deleteProduct(id);
     setProductsData(productsData.filter(post => post.id !== id))
@@ -35,6 +38,14 @@ function Dashboard() {
     setShow(true)
   };
 
+  //Edit-modal related
+  const [showModal, setShowModal] = useState(false);
+  const [updatedProduct, setUpdatedProduct] = useState({});
+  const handleCloseModal = () => setShowModal(false);
+  const handleOpenModal = (productId) => { 
+    setProductModal(productsData.find(product => product.id == productId));
+    setShowModal(true);}
+  
   return (
     <>
       <SideBar />
@@ -53,11 +64,11 @@ function Dashboard() {
           </div>
 
           <ButtonNewProduct />
-
           <div className="cards">
             {data.map((product) => {
               return (
                 <>
+                  <EditProduct show={showModal} handleClose={handleCloseModal} product={productModal}/> 
                   <ProductModalAdm show={show} handleClose={handleClose} product={productModal} />
                   <Card border="light" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={product.img} />
@@ -65,7 +76,7 @@ function Dashboard() {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                       <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart /> View </Button>
-                      <Button variant="light"><BsPencilSquare/> Edit </Button>
+                      <Button variant="light" onClick={() => handleOpenModal(product.id)}><BsPencilSquare/> Edit </Button>
                       <Button variant="light"><BsTrash/> Delete </Button>
                     </Card.Body>
                   </Card>

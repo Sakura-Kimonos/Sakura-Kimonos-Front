@@ -6,9 +6,7 @@ import Button from "react-bootstrap/Button";
 
 
 
-
-
-const ProductModalAdm = ({ show, handleClose, product }) => {
+const ProductModalAdm = ({ show, handleClose, product, handleUpdate }) => {
  
   return (
     <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
@@ -42,7 +40,7 @@ const ProductModalAdm = ({ show, handleClose, product }) => {
                               </tbody>
                             </Table>
                             <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> 
-                            <Button variant="light"><BsPencilSquare/> Edit </Button>
+                            <Button variant="light" onClick={() => handleUpdate()}><BsPencilSquare/> Edit </Button>
                             <Button variant="light"><BsTrash/> Delete </Button>
                             </div> 
                   </div>
