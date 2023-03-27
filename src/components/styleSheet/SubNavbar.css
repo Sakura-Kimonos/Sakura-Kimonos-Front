@@ -10,7 +10,9 @@
     position: relative;
     left: 0;
     animation: moveRight 15s linear infinite; 
-    color: white;
+    color: #CB5F5F;
+    background-color: white;
+    
   }
   
   @keyframes moveRight {
