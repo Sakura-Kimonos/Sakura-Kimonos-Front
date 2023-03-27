@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import { BsSearchHeart, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
@@ -74,7 +74,8 @@ function Dashboard() {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                       <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart /> View </Button>
-                      <Button variant="light"><BsPencilSquare /> Edit </Button>
+                      <Link to={`editProduct/${product.id}`}>
+                      <Button variant="light"><BsPencilSquare /> Edit </Button></Link>
                       <Button variant="light" onClick={() => handleShowConfirmation(product.id)}><BsTrash /> Delete </Button>
                     </Card.Body>
                   </Card>

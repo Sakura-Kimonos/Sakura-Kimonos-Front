@@ -12,7 +12,7 @@ import AdmDashboard from "../pages/AdmDashboard";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 
-// import EditProduct from "../pages/EditProduct"
+import EditProduct from "../components/EditProduct"
 
 
 
@@ -71,11 +71,11 @@ export const router = createBrowserRouter([
                     // },  
                     
                 
-                    // {
-                    //     path: "advertisement/editProduct/:id",
-                    //     element: <EditProduct />,
-                    //     loader: loaderCardUser, 
-                    // },
+                    {
+                        path: "admDashboard/editProduct/:id",
+                        element: <EditProduct />,
+                        loader: loaderCardUser, 
+                    },
                         
                     {
                         path: '/CookiesPolicy',
@@ -91,8 +91,8 @@ export const router = createBrowserRouter([
 ]);
 
 async function loaderCardUser  ({ params })  {
-    const CardUser = await productHandler.loadProduct(params.id)  
-    return { CardUser };
+    const CardAdm = await productHandler.loadProduct(params.id)  
+    return { CardAdm };
 
   
 };
