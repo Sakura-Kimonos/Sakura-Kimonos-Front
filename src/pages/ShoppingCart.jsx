@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {getItem, setItem} from '../services/productService'
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard,
     MDBCardBody,
     MDBCardImage, MDBIcon,
@@ -6,7 +7,45 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard,
 import CartItem from '../components/CartItem';
 
 
-const Cart = () => {
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const Cart = () => {
     const [items, setItems] = useState([
         { id: 1, name: 'Producto 1', price: 10, quantity: 1 },
         { id: 2, name: 'Producto 2', price: 20, quantity: 2 },
@@ -62,4 +101,4 @@ const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
     );
 };
 
-export default Cart;
+export default Cart;*/
