@@ -2,9 +2,9 @@ import SideBar from '../components/SideBar';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Form, Row, Col, Button } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
 
-
-const EditProduct = () => {
+const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
 
     const { products } = useLoaderData();
     const id = products.id;

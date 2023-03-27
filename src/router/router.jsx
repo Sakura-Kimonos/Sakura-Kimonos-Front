@@ -4,8 +4,8 @@ import Root from "./Root";
 import Home from '../pages/Home';
 import AddProduct from '../pages/AddProduct';
 import NotFound from "../pages/NotFound";
-// import Join from "../pages/Join";
-// import Login from "../pages/Login";
+import Join from "../pages/Join";
+import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
@@ -38,16 +38,16 @@ export const router = createBrowserRouter([
                         element: <AddProduct />,
                         // loader: loaderCardUser
                     }, 
-                    // {
-                    //     path: '/join',
-                    //     element: <Join />,
-                    //     // loader: loaderCardUser
-                    // },
-                    // {
-                    //     path: '/login',
-                    //     element: <Login />,
-                    //     // loader: loaderCardUser
-                    // },
+                    {
+                        path: '/join',
+                        element: <Join />,
+                        // loader: loaderCardUser
+                    },
+                    {
+                        path: '/login',
+                        element: <Login />,
+                        // loader: loaderCardUser
+                    },
                     {
                         path: '/userDashboard',
                         element: <UserDashboard />,

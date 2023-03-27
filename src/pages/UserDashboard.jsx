@@ -15,6 +15,13 @@ function Dashboard() {
 
   const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  const data = productsData.filter((product) => {
+    return product.title == searchQuery || product.price == searchQuery;
+  });
 
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
@@ -23,13 +30,7 @@ function Dashboard() {
     setProductModal(productsData.find(product => product.id == productId));
    setShow(true)
 }
-const [searchQuery, setSearchQuery] = useState("");
-const handleSearchChange = (event) => {
-  setSearchQuery(event.target.value);
-};
-const data = productsData.filter((product) => {
-  return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
-});
+
 
 
 // let [imagesArray, setImagesArray] = useState([]);
