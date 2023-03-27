@@ -14,27 +14,21 @@ import ProductModalUser from '../components/ProductModalUser';
 
 function Dashboard() {
 
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
+  
   const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
   const [searchQuery, setSearchQuery] = useState("");
-  const data = productsData.filter(
-    (product) =>
-      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.price.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-  const deleteProduct = async (id) => {
-    await productHandler.deleteProduct(id);
-    setProductsData(productsData.filter(post => post.id !== id))
-}
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  const data = productsData.filter((product) => {
+    return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
+  });
 
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    console.log(productId)
     setProductModal(productsData.find(product => product.id == productId));
     setShow(true)
   };
@@ -59,7 +53,6 @@ function Dashboard() {
 
       <div className="cards">
         {data.map((product) => {
-          console.log(product)
          return (
           <>
             <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
@@ -100,20 +93,3 @@ export default Dashboard;
 
 
 
-
-
-// import CardsUser from '../components/CardsUser';
-
-// // import {  useLoaderData } from 'react-router-dom'
-// // import Trending from "../components/Trending";
-// const UserDashboard = () => {
-//     // const {products}  = useLoaderData();
-//     return (
-// <>
-
-//                 <CardsUser/>
-          
-//                 </>
-//     )
-// };
-// export default UserDashboard;

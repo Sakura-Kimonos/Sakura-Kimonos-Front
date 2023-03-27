@@ -2,13 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import Root from "./Root";
 import Home from '../pages/Home';
-// import AddProduct from '../pages/AddProduct';
-// import NotFound from "../pages/NotFound";
-// import Join from "../pages/Join";
-// import Login from "../pages/Login";
+import AddProduct from '../pages/AddProduct';
+import NotFound from "../pages/NotFound";
+import Join from "../pages/Join";
+import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
-import ShoppingCart from "../pages/ShoppingCart";
+//import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 
@@ -29,32 +29,25 @@ export const router = createBrowserRouter([
                         loader: loaderAdvertisement,
                     },
                     {
-                        path: '/ShoppingCart/:CartId',
-                        element: <ShoppingCart />,
+                       // path: '/ShoppingCart/:CartId',
+                       // element: <ShoppingCart />,
                        // loader: loaderCardUser,
                     },
-                    
-                    //{
-                       // path: '/cart',
-                        //element: <ShoppingCart />,
-                        //loader: loaderCartItem,
-                    //},
-
-                    // {
-                    //     path: '/addProduct',
-                    //     element: <AddProduct />,
-                    //     // loader: loaderCardUser
-                    // }, 
-                    // {
-                    //     path: '/join',
-                    //     element: <Join />,
-                    //     // loader: loaderCardUser
-                    // },
-                    // {
-                    //     path: '/login',
-                    //     element: <Login />,
-                    //     // loader: loaderCardUser
-                    // },
+                    {
+                        path: '/AddProduct',
+                        element: <AddProduct />,
+                        // loader: loaderCardUser
+                    }, 
+                    {
+                        path: '/join',
+                        element: <Join />,
+                        // loader: loaderCardUser
+                    },
+                    {
+                        path: '/login',
+                        element: <Login />,
+                        // loader: loaderCardUser
+                    },
                     {
                         path: '/userDashboard',
                         element: <UserDashboard />,

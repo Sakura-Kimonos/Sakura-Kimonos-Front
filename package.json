@@ -20,16 +20,18 @@
     "fa-icons": "^0.2.0",
     "hook-js": "^2.2.0",
     "json-server": "^0.17.1",
+    "lottie-react": "^2.4.0",
+    "lottie-web": "^5.10.2",
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-router-hash-link": "^2.4.3",
-    "sweetalert2": "^11.4.8",
-    "sweetalert2-react-content": "^5.0.7",
     "react-modal": "^3.16.1",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "react-router-hash-link": "^2.4.3",
+    "sweetalert2": "^11.7.3",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
