@@ -1,26 +1,26 @@
 import { useState } from 'react';
-// import { jointHandler } from '../handlers/joinHandler';
+import { userHandler } from '../handlers/userHandler';
 import SideBar from '../components/SideBar';
 
 
 const CreateJoin = () => {
 
-  const [name, setName] = useState("");
-  const [e_Mail, setE_Mail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [age, setAge] = useState("");
-  const [shipping_Address, setShipping_Address] = useState("");
-  const [phone_Number, setPhone_Number] = useState("");
+  const [shippingAddress, setShippingAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   
 
 
-  const handleNameChange = (event) => {
-    let nameInput = event.target.value;
-    setName (nameInput);
+  const handleFullNameChange = (event) => {
+    let fullNameInput = event.target.value;
+    setFullName (fullNameInput);
   };
-  const handleE_MailChange = (event) => {
-    let e_MailInput = event.target.value;
-    setE_Mail(e_MailInput);
+  const handleEmailChange = (event) => {
+    let emailInput = event.target.value;
+    setEmail(emailInput);
   };
   const handlePasswordChange = (event) => {
     let passwordInput = event.target.value;
@@ -33,20 +33,20 @@ const CreateJoin = () => {
   };
 
   const handlShipping_AddressChange = (event) => {
-    let shipping_AddressInput = event.target.value;
-    setShipping_Address(shipping_AddressInput);
+    let shippingAddressInput = event.target.value;
+    setShippingAddress(shippingAddressInput);
   };
 
-  const handlPhone_NumberChange = (event) => {
-    let phone_NumberInput = event.target.value;
-    setPhone_Number(phone_NumberInpu);
+  const handlePhone_NumberChange = (event) => {
+    let phoneNumberInput = event.target.value;
+    setPhoneNumber(phoneNumberInput);
   };
    
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    let newJoin = { name, e_Mail, password, age, shipping_Address, phone_Number, };
-    jointHandler.addJoin(newJoin);
+    let newUser = { fullName, email, password, age, shippingAddress, phoneNumber, };
+    userHandler.addUser(newUser);
     event.target.reset()
   };
 
@@ -60,13 +60,13 @@ const CreateJoin = () => {
         <h1>Join Us</h1>
 
         <div className="mb-3">
-          <label htmlFor=" name" className="form-label"> Name Last Name</label>
-          <input focus name=" Name" type="text" className="form-control" placeholder="Type Your Name Last Name" onChange={handleNameChange} required />
+          <label htmlFor=" name" className="form-label"> Full Name</label>
+          <input focus name=" Name" type="text" className="form-control" placeholder="Type Your Full Name" onChange={handleFullNameChange} required />
         </div>
 
         <div className="mb-3">
-          <label htmlFor="e_Mail" className="form-label">E-Mail</label>
-          <input name="E_Mail" type="text"  className="form-control" placeholder="Type Your E-Mail" onChange={handleE_MailChange} required />
+          <label htmlFor="email" className="form-label">Email</label>
+          <input name="email" type="text"  className="form-control" placeholder="Type Your E-Mail" onChange={handleEmailChange} required />
         </div>
 
         <div className="mb-3">
@@ -75,8 +75,13 @@ const CreateJoin = () => {
         </div>
 
         <div className="mb-3">
+          <label className="form-label" htmlFor="password">Confirm Password</label>
+          <input name="Password" type="Password" className="form-control" id="confirm-input-password" required placeholder="Type Password" onChange={handlePasswordChange} />
+        </div>
+
+        <div className="mb-3">
           <label className="form-label" htmlFor="age">Age </label>
-          <input name="Age" type="date" min="1" className="form-control" id="input-age" required placeholder="Age (Date Format)" onChange={handleAgeChange} />
+          <input name="Age" type="number" min="1" className="form-control" id="input-age" required placeholder="Age (Date Format)" onChange={handleAgeChange} />
         </div>
 
         <div className="mb-3">
@@ -86,11 +91,10 @@ const CreateJoin = () => {
 
         <div className="mb-3">
           <label className="form-label" htmlFor="phone_Number">Phone Number</label>
-          <input name="Phone_Number" type="number" className="form-control" id="input-phone_Number" required placeholder="Type Phone Number" onChange={handlPhone_NumberChange} />
+          <input name="Phone_Number" type="number" className="form-control" id="input-phone_Number" required placeholder="Type Phone Number" onChange={handlePhone_NumberChange} />
         </div>      
 
         <button type="submit" className="btn btn-primary" id="btn-ad">Send</button>
-
        
       </form>
     </div>

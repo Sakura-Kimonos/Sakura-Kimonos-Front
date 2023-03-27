@@ -22,7 +22,7 @@ export const productService = {
         return allProducts;
     },
     async getProduct(id) {
-        let response = await apiClient.get("/" + id);
+        let response = await apiClient.get("/Product/GetProductById" + id);
         if (!response == 200)
             throw {
                 status: response.status,
@@ -47,10 +47,10 @@ export const productService = {
 
     },
     async deleteProduct(id) {
-        await apiClient.delete("/" + id)
+        await apiClient.delete("/Product/DeactivateProduct" + id)
     },
     async updateProduct(id, updatedProductRequestModel){
-        await apiClient.patch("/Product/Patch" + id, updatedProductRequestModel)
+        await apiClient.patch("/Product/UpdateProduct" + id, updatedProductRequestModel)
     }
 }
 
