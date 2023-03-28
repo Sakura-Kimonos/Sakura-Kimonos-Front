@@ -11,8 +11,8 @@ import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
-
 import EditProduct from "../pages/EditProduct"
+import Season from "../pages/Season"
 
 
 
@@ -53,6 +53,12 @@ export const router = createBrowserRouter([
                         element: <UserDashboard />,
                         loader: loaderAdvertisement,
                     },   
+                    {
+                        path: '/season',
+                        element: <Season />,
+                        loader: loaderAdvertisement,
+                    },   
+
                     {
                         path: '/admDashboard',
                         element: <AdmDashboard />,

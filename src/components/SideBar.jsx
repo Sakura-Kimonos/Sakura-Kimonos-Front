@@ -68,9 +68,9 @@ function SideBar() {
         </li>
         <div className='first-block'> 
       <li>
-          <a href="#">
+          <a href="/season">
           <BsFlower1 className="sidebar-icon"/> 
-            {!collapsed && <span className="sidebar-text"> New Season </span>}
+            {!collapsed && <span className="sidebar-text"> Season </span>}
           </a>
         </li>
         <li>
