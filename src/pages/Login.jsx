@@ -22,7 +22,7 @@ const CreateLogin = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let newLogin = { e_Mail, password,  };
-    LogintHandler.addLogin(newLogin);
+    LoginHandler.addLogin(newLogin);
     event.target.reset()
   };
 

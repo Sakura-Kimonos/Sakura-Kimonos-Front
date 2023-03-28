@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import AddProduct from '../pages/AddProduct';
 import NotFound from "../pages/NotFound";
 import Join from "../pages/Join";
+import UserProfile from "../pages/UserProfile ";
 import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
@@ -47,6 +48,11 @@ export const router = createBrowserRouter([
                         path: '/login',
                         element: <Login />,
                         // loader: loaderCardUser
+                    },
+                    {
+                        path: '/userProfile',
+                        element: <UserProfile />,
+                    //     // loader: loaderCardUser
                     },
                     {
                         path: '/userDashboard',

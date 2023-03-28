@@ -1,8 +1,10 @@
 form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #039C7E !important;
     width: 60vw;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding: 5vh;
     margin: 5vh;
     border-radius: 5vh;
@@ -15,7 +17,7 @@ form{
 background-color: white;
 border-radius: 1.25rem;
   border: 0;
-  width: 40vw;
+  width: 10vw;
   color: black;
   padding: .3125rem;
   position: sticky;
@@ -25,15 +27,19 @@ border-radius: 1.25rem;
 
 
 #btn-ad{
+    justify-content: center;
     background-color: #80C5F6;
     color: black;
     border-style: none;
+    width: 15vw;
+    margin: 20px auto;
 }
 
 #btn-ad:hover{
 color: white;
 background-color: #80C5F6;
 box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
 }
 .container-form{
     display: flex;
@@ -53,6 +59,7 @@ box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 #input-description{
 height: 20vh;
 }
+
 
 
 @media (max-width: 600px){

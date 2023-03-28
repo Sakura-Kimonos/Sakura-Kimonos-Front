@@ -47,7 +47,7 @@ const CreateJoin = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let newJoin = { name, e_Mail, password, age, shipping_Address, phone_Number, };
-    jointHandler.addJoin(newJoin);
+    joinHandler.addJoin(newJoin);
     event.target.reset()
   };
 
