@@ -47,7 +47,7 @@ function Dashboard() {
   return (
     <>
       <SideBar />
-      <div className="container-gn" id="text">
+      <div className="container-gn" id="text" >
         <br />
         <h1> Sakura Kimonos</h1>
         <>

@@ -42,10 +42,7 @@ function Dashboard() {
       <h1> Sakura Kimonos</h1>
     <>
       <div className="container-bar">
-        <input
-          className="searchStyle"
-          type="text"
-          placeholder="🔍 Search by product name or price"
+        <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
           value={searchQuery}
           onChange={handleSearchChange}
         />
