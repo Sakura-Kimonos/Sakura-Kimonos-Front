@@ -12,8 +12,8 @@ import AdmDashboard from "../pages/AdmDashboard";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 import EditProduct from "../pages/EditProduct"
-import Season from "../pages/Season"
-
+import Kimonos from "../pages/Kimonos"
+import Yukata from "../pages/Yukata"
 
 
 export const router = createBrowserRouter([
@@ -54,11 +54,15 @@ export const router = createBrowserRouter([
                         loader: loaderAdvertisement,
                     },   
                     {
-                        path: '/season',
-                        element: <Season />,
+                        path: '/kimonos',
+                        element: <Kimonos />,
                         loader: loaderAdvertisement,
-                    },   
-
+                    }, 
+                    {
+                        path: '/yukata',
+                        element: <Yukata />,
+                        loader: loaderAdvertisement,
+                    },  
                     {
                         path: '/admDashboard',
                         element: <AdmDashboard />,

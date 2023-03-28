@@ -15,18 +15,13 @@ function Dashboard() {
   
   const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSeason, setSelectedSeason] = useState("");
-
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
+ 
+    
   const data = productsData.filter((product) => {
-    const lowerCaseSeason = product.season.toLowerCase();
-    const isSeasonMatch = selectedSeason ? lowerCaseSeason === selectedSeason.toLowerCase() : true;
-    const isSearchMatch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.price == searchQuery;
-    return isSeasonMatch && isSearchMatch;
+    const isCategoryMatch = product.category.toLowerCase() === 'yukata';
+    return isCategoryMatch 
   });
+  
 
   
   const [show, setShow] = useState(false);
@@ -43,24 +38,10 @@ function Dashboard() {
     <SideBar/>
     <div className="container-gn" id="text">
        <br />
-      <h1> Sakura Kimonos</h1>
+      <h1> YUKATA KIMONOS</h1>
       <div className="container-bar">
-  <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
-    value={searchQuery}
-    onChange={handleSearchChange}
-    
-  />
-   
-  <div>Search by season
-  {/* <h5> Search by season</h5> */}
-  <select className="season-select" value={selectedSeason} onChange={(e) => setSelectedSeason(e.target.value)}>
-    <option value="">All seasons</option>
-    <option value="Spring">Spring</option>
-    <option value="Summer">Summer</option>
-    <option value="Fall">Fall</option>
-    <option value="Winter">Winter</option>
-  </select>
-  </div>
+ 
+  
 </div>
 
     <>

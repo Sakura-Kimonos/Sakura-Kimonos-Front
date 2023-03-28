@@ -68,19 +68,19 @@ function SideBar() {
         </li>
         <div className='first-block'> 
       <li>
-          <a href="/season">
+          <a href="/">
           <BsFlower1 className="sidebar-icon"/> 
-            {!collapsed && <span className="sidebar-text"> Season </span>}
+            {!collapsed && <span className="sidebar-text"> New Season </span>}
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/Kimonos">
             <TbLetterS className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Full-set Kimono</span>}
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/yukata">
             <TbLetterA className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Yukata </span>}
           </a>
