@@ -12,7 +12,7 @@ import AdmDashboard from "../pages/AdmDashboard";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 
-import EditProduct from "../components/EditProduct"
+import EditProduct from "../pages/EditProduct"
 
 
 

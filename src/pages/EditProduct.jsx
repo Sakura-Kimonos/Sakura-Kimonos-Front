@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import "../pages/styleSheetPages/AddProduct.css"
 import SideBar from '../components/SideBar';
+import Modal from 'react-bootstrap/Modal';
 
 function EditProduct() {
     const { CardAdm } = useLoaderData();
@@ -74,36 +75,43 @@ function EditProduct() {
     };
 
 
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+ 
+
+       
     return (
         <>
             <SideBar />
             <div className="container-form">
                 <form onSubmit={handleSubmit} itemID="form1">
-                    <h1>What do you want to sell?</h1>
+                <h1>Edit product</h1>
                     <div className="mb-3">
                         <label htmlFor="title" className="form-label">Title</label>
-                        <input name="title" type="text" className="form-control" placeholder={CardAdm.title} onChange={handleTitleChange} />
+                        <input name="title" type="text" className="form-control" placeholder={CardAdm.title} onChange={handleTitleChange} required/>
 
                     </div>
                     <div className="mb-3">
                         <label htmlFor="price" className="form-label">Price</label>
-                        <input name="price" type="number" className="form-control" placeholder={CardAdm.price} onChange={handlePriceChange} />
+                        <input name="price" type="number" className="form-control" placeholder={CardAdm.price} onChange={handlePriceChange} required />
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label" htmlFor="description">Description</label>
-                        <input name="description" type="text" className="form-control" id="input-description" placeholder={CardAdm.description} onChange={handleDescriptionChange} />
+                        <input name="description" type="text" className="form-control" id="input-description" placeholder={CardAdm.description} onChange={handleDescriptionChange} required/>
                     </div>
 
 
                     <div className="mb-3">
                         <label htmlFor="units" className="form-label">Units</label>
-                        <input name="units" type="number" className="form-control" placeholder={CardAdm.units} onChange={handleUnitsChange} />
+                        <input name="units" type="number" className="form-control" placeholder={CardAdm.units} onChange={handleUnitsChange} required />
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label" htmlFor="material">Material</label>
-                        <input name="material" type="text" className="form-control" id="input-material" required placeholder={CardAdm.material} onChange={handleMaterialChange} />
+                        <input name="material" type="text" className="form-control" id="input-material" required placeholder={CardAdm.material} onChange={handleMaterialChange}  />
                     </div>
 
                     <div className="mb-3">
@@ -124,10 +132,10 @@ function EditProduct() {
                     <div className="mb-3">
                         <label htmlFor="img" className="form-label">Image</label>
                         <input name="img" type="file" className="form-control"
-                            onChange={handleImgChange} />
+                            onChange={handleImgChange} required/>
                     </div>
 
-                    <button type="submit" className="btn btn-primary" id="btn-E" >Update</button>
+                   <button type="submit" className="btn btn-primary" id="btn" onClick={handleShow}>Update</button>
                 </form>
             </div></>
     );

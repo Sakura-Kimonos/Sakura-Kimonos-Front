@@ -1,20 +1,8 @@
 import { useState } from 'react';
-import {
-    BsArrowBarRight,
-    BsArrowBarLeft,
-    BsFlower1,
-    BsFillHouseHeartFill
-  } from "react-icons/bs";
-import {
-    TbLetterS,
-    TbLetterA,
-    TbLetterK,
-    TbLetterU,
-    TbLetterR
-} from "react-icons/tb";
-import {
-  RiArrowGoBackLine
-} from 'react-icons/ri';
+import { BsArrowBarRight, BsArrowBarLeft, BsFlower1, BsFillHouseHeartFill } from "react-icons/bs";
+import { TbLetterS, TbLetterA, TbLetterK, TbLetterU, TbLetterR, } from "react-icons/tb";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { RiArrowGoBackLine } from 'react-icons/ri';
 
 import '../components/styleSheet/SideBar.css';
 
@@ -54,7 +42,7 @@ function SideBar() {
     <div className="sidebar-menu">
       <ul>
       <li>
-          <a href="#">
+          <a href="/">
           <RiArrowGoBackLine className="sidebar-icon"/> 
             {!collapsed && <span className="sidebar-text"> Homepage </span>}
           </a>
@@ -102,18 +90,19 @@ function SideBar() {
             {!collapsed && <span className="sidebar-text"> Sleepwear </span>}
           </a>
         </li>
-        <li>
-          <a href="#">
-            <BsCart3 className="sidebar-icon" />
-            {!collapsed && <span className="sidebar-text"> Shopping Cart </span>}
-          </a>
-        </li>
+       
         </div>
         <div className="second-block"> 
         <li>
           <a href="#">
             <BsFillHouseHeartFill className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Your profile </span>}
+          </a>
+        </li>
+        <li>
+          <a href="/admDashboard">
+            <MdOutlineDashboardCustomize className="sidebar-icon" />
+            {!collapsed && <span className="sidebar-text"> Dashboard </span>}
           </a>
         </li>
         </div>

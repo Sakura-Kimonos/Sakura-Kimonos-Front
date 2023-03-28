@@ -1,7 +1,8 @@
 import "./styleSheetPages/AddProduct.css"
 import { useState } from 'react';
 import { productHandler } from '../handlers/productHandler';
-import SideBar from '../components/SideBar';
+import SideBarLogged from '../components/SideBarLogged';
+
 
 
 const CreateProduct = () => {
@@ -75,7 +76,7 @@ const CreateProduct = () => {
 
   return (
     <>
-      <SideBar />
+      <SideBarLogged />
       <div className="container-form">
         <form onSubmit={handleSubmit} itemID="form1">
           <h1>Create a new product</h1>
