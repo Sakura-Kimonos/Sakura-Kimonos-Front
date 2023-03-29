@@ -37,7 +37,7 @@ function Dashboard() {
 
   function buildImg(extension, content) {
     return "data:" + extension + ";base64," + content;
-}
+  }
 
   useEffect(() => {
     getProducts()

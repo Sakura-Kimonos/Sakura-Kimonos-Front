@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BsSearchHeart, BsCart3 } from 'react-icons/bs';
 import './styleSheet/Trending.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ProductModalUser from './ProductModalUser'; 
 import '../pages/styleSheetPages/userDashboard.css'
 
 
-function Trending({ products}) {
+function Trending({products}) {
 
   const randomIndex = Math.floor(Math.random() * (products.length - 3));
   const resultTrending = products.slice(randomIndex, randomIndex + 3);
@@ -17,7 +17,7 @@ function Trending({ products}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    setProductModal(products.find(product => product.id == productId))
+    setProductModal(products.find(product => product.producItem.id == productId))
     // console.log(productModal)
     setShow(true)
   };
@@ -42,15 +42,15 @@ function Trending({ products}) {
       {productList.map((product) => {
         return (
           <>
-            <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
-            <div key={product.id}>
+            <ProductModalUser show={show} handleClose={handleClose} productModal={productModal} />
+            <div key={product.producItem.id}>
 
             <Card border="light" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={product.img}  />
+                    <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)}  />
                     <Card.Body className='text-center'>
-                      <Card.Title>{product.title} </Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
-                    <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
+                      <Card.Title>{product.producItem.title} </Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
+                    <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart/> View </Button>
                     <Button variant="light"><BsCart3/> Add to cart </Button>
                     </Card.Body>
               </Card>
