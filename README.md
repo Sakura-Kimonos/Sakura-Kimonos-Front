@@ -1,6 +1,6 @@
-# - Sakura-Kimonos-Front
+#  Sakura-Kimonos-Front
 
- <h2 align="center"> :kimono: Welcome to Sakura Kimonos!!!!</h2>
+ <h2 align="center"> :kimono: Welcome to Sakura Kimonos</h2>
 
 
  <div align="center"><img src="https://user-images.githubusercontent.com/117834362/226922234-ce15524f-26c2-4ff8-ac0f-c2053b1015e2.png"></div>
@@ -48,7 +48,7 @@
 
 
 
-<h2 align="center">  How to install the project (Front):</h2>
+<h2 align="center"> :computer: How to install the project (Front):</h2>
 
 <p align="center">1) Clone the repository</p>
 <p align="center">2) npm install</p>
@@ -84,4 +84,4 @@
 
 
 
-
+*Developed with :sparkling_heart: by Sakura-Kimonos Team*
