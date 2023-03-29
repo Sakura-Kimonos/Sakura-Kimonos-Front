@@ -51,19 +51,23 @@ const UserProfile= () => {
 
         <div class="row">
         
-          <div class="col-md-5 bg-warning text-dark" >
+          <div class="col-md-5 bg-warning text-dark position-relative">
 
-          <div class="col-sm4">        
-            <GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p>
-            <GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p>            
-          </div> 
+           
 
+            <div class="bg-danger position-absolute top-50 start-50 translate-middle">
+
+             <GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p>
+             <GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p>            
+          
+            </div>
 
           
           </div>
 
-        <div class="col-md-7  bg-dark text-white">
+        <div class="col-md-7 bg-dark">
 
+         
           <div className="mb-3">       
             <label htmlFor=" name" className="form-label"> </label>
             <span focus name=" Name"  type="text" className="form-control" onChange={handleNameChange} required />
@@ -79,11 +83,13 @@ const UserProfile= () => {
             <span  name="Phone_Number" type="text" className="form-control" id="input-Phone_Number" required  onChange={handlePhone_NumberChange} />
           </div>
 
+         
+
           <div class="d-grid gap-3">
 
-            <button class="btn btn-primary" type="button">Button</button>
-            <button class="btn btn-primary" type="button">Button</button>
-            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">My Last Orders</button>
+            <button class="btn btn-primary" type="button">My Favorite Address</button>
+            <button class="btn btn-primary" type="button">Latest Payment Method</button>
 
           </div>
 
