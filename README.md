@@ -75,7 +75,7 @@
 <p align="center"> - Implement categories filter in the navigation sidebar </p>  
 
 
-<h2> -👩‍ 💻Group members:</h2>
+<h2 align="center"> 👩‍ 💻Group members:</h2>
 
 
 
