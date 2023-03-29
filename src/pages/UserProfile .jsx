@@ -51,7 +51,7 @@ const UserProfile= () => {
 
         <div class="row">
         
-          <div class="col-md-5 bg-warning text-dark position-relative">
+          <div class="col-md-5 bg-warning text-dark text-center position-relative" >
 
            
 
@@ -86,10 +86,10 @@ const UserProfile= () => {
          
 
           <div class="d-grid gap-3">
-
-            <button class="btn btn-primary" type="button">My Last Orders</button>
-            <button class="btn btn-primary" type="button">My Favorite Address</button>
-            <button class="btn btn-primary" type="button">Latest Payment Method</button>
+          
+            <button class="btn btn-primary" type="button" class="btn btn-info">My Last Orders</button>
+            <button class="btn btn-primary" type="button" class="btn btn-info">My Favorite Addres</button>
+            <button class="btn btn-primary" type="button" class="btn btn-info">Latest Payment Method</button>
 
           </div>
 

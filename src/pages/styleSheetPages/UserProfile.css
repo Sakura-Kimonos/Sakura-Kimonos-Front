@@ -1,7 +1,7 @@
 form{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #039C7E !important;
+    background-color: hsl(167, 28%, 87%) !important;
     width: 60vw;
     align-items: left;
     justify-content: left;
