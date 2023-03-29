@@ -12,15 +12,17 @@ const apiClient = axios.create({
 
 export const productService = {
     async getProducts() {
+        
         let response = await apiClient.get("/Product/GetAllProduct");
+        
         if (!response==200)
             {
                 alert('Hubo un error al traer los productos');
             };
         let allProducts = response.data;
-       
         return allProducts;
     },
+   
     async getProduct(id) {
         let response = await apiClient.get("/Product/GetProductById" + id);
         if (!response == 200)
@@ -47,10 +49,10 @@ export const productService = {
 
     },
     async deleteProduct(id) {
-        await apiClient.delete("/Product/DeactivateProduct" + id)
+        await apiClient.delete("/Product/DeactivateProduct?id=" + id);
     },
     async updateProduct(id, updatedProductRequestModel){
-        await apiClient.patch("/Product/UpdateProduct" + id, updatedProductRequestModel)
+        await apiClient.patch("/Product/UpdateProduct?id=" + id, updatedProductRequestModel)
     }
 }
 

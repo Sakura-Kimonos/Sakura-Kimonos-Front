@@ -8,8 +8,8 @@ import ProductModalUser from './ProductModalUser';
 import '../pages/styleSheetPages/userDashboard.css'
 
 
-
 function Trending({ products}) {
+
   const randomIndex = Math.floor(Math.random() * (products.length - 3));
   const resultTrending = products.slice(randomIndex, randomIndex + 3);
   const [productList, setProductList] = useState(resultTrending);
@@ -18,9 +18,22 @@ function Trending({ products}) {
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
     setProductModal(products.find(product => product.id == productId))
-    console.log(productModal)
+    // console.log(productModal)
     setShow(true)
   };
+
+  async function getProducts() {
+    var resultList = await productService.getProducts();
+    setProductsData(resultList);
+  }
+
+  function buildImg(extension, content) {
+    return "data:" + extension + ";base64," + content;
+}
+
+  useEffect(() => {
+    getProducts()
+  },[])
 
   return (
     <>

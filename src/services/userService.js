@@ -47,7 +47,7 @@ export const userService = {
 
     },
     async deleteUser(id) {
-        await apiClient.delete("/User/DeactivateUser" + id)
+        await apiClient.delete("/User/DeactivateUser?id=" + id)
     },
     async updateUser(id, updatedUserRequestModel){
         await apiClient.patch("/User/Patch" + id, updatedUserRequestModel)

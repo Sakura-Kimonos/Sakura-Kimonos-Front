@@ -31,11 +31,14 @@ export const productHandler = {
         return productService.submitProduct(newProductRequestModel);
 
     },
-
     async loadProducts() {
         var result = await  productService.getProducts();
         return result; 
     },
+    // async loadImages(){
+    //     var resultImages = await productService.getImages();
+    //     return resultImages; 
+    // },
     loadProduct(id) {
         return productService.getProduct(id);
     },

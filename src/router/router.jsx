@@ -11,7 +11,6 @@ import AdmDashboard from "../pages/AdmDashboard";
 // import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
-
 // import EditProduct from "../pages/EditProduct"
 
 
@@ -19,7 +18,7 @@ import ContactUs from '../pages/ContactUs';
 export const router = createBrowserRouter([
     { 
         path: '/',
-        element: < Root/>,
+        element: <Root/>,
         errorElement: <NotFound />, 
       
                 children: [
@@ -51,7 +50,7 @@ export const router = createBrowserRouter([
                     {
                         path: '/userDashboard',
                         element: <UserDashboard />,
-                        loader: loaderAdvertisement,
+                        loader: loaderAdvertisement, 
                     },   
                     {
                         path: '/admDashboard',
@@ -93,10 +92,12 @@ export const router = createBrowserRouter([
 async function loaderCardUser  ({ params })  {
     const CardUser = await productHandler.loadProduct(params.id)  
     return { CardUser };
-
-  
 };
 
+// async function loaderImages() {
+//     const images = await productHandler.loadImages()
+//     return {images}; 
+// }
 async function loaderAdvertisement () {
  const products = await productHandler.loadProducts()
     return { products };
