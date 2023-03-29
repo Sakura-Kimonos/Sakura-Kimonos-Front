@@ -8,7 +8,7 @@
 
 
 
- <h2 align="center"> :busts_in_silhouette:  Mision & Team </h2>
+ <h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
  
   <p align="center"> We are a team of Japanese fashion enthusiasts aiming for a more understanding and open-minded society, where fashion plays a crucial rol. We believe that fashion has built individual and collective identities for a long time. Now it's time for fashion to melt and adapt itself to new shapes, colors, features and fabrics. That is why in Sakura Kimonos we support the investigation and development of more environmentally responsible products, pacgkaging and commit to create sustainable importing routes.</p>
    <p align="center">Inmerse yourself in Japanese culture and its fashion history while revisiting some of its most well-known garments, such as full-set Kimono, haori, yukata and so on. Explore Japanese fashion visual language through patterns, fabrics and accesories and create your own unique look with us! Share your experience in Sakura Kimonos and connect with other Sakura Kimonos' fans around the world.</p>
