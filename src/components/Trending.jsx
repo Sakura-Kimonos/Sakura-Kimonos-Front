@@ -22,6 +22,13 @@ function Trending({ products}) {
     setShow(true)
   };
 
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const addToCart = async (product) => {
+    console.log("cart product array", cartProducts);
+    cartProducts.push(product);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
+
   return (
     <>
     <div className="cards">
@@ -38,7 +45,9 @@ function Trending({ products}) {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
-                    <Button variant="light"><BsCart3/> Add to cart </Button>
+                    <Link to={`/Cart`}>
+                    <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button>
+                    </Link>
                     </Card.Body>
               </Card>
               </div>

@@ -6,7 +6,12 @@ import Button from "react-bootstrap/Button";
 import './styleSheet/ProductModalUser.css'
 
 
-
+const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const addToCart = async (product) => {
+    console.log("cart product array", cartProducts);
+    cartProducts.push(product);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
 
 const ProductModalUser = ({ show, handleClose, product }) => {
   
@@ -18,10 +23,10 @@ const ProductModalUser = ({ show, handleClose, product }) => {
         <Modal.Body>
                   <div id="modal" className="modal-body" style={{ width: '100%'}} border="light">
                         <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> <img variant="top" style={{width: '350px'}} src={product.img} /> </div>
-                           <p className='text-center' style={{marginTop: '20px'}}>  {product.description}  </p>
-                           <h4 className='text-center' style={{marginTop: '20px'}}>  {product.price}$ </h4>
+                          <p className='text-center' style={{marginTop: '20px'}}>  {product.description}  </p>
+                          <h4 className='text-center' style={{marginTop: '20px'}}>  {product.price}$ </h4>
                         
-                           <Table striped bordered hover>
+                            <Table striped bordered hover>
                               <tbody>
                                 <tr>
                                   <td><strong>Category</strong></td>
@@ -41,7 +46,8 @@ const ProductModalUser = ({ show, handleClose, product }) => {
                                 </tr>
                               </tbody>
                             </Table>
-                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> <Button variant="light"><BsCart3/> Add to cart </Button> </div> 
+                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> 
+                            <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button> </div> 
                   </div>
         </Modal.Body>
       </Modal>)

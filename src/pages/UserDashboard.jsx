@@ -8,13 +8,11 @@ import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 import '../pages/styleSheetPages/UserDashboard.css';
 import SideBar from '../components/SideBar';
 import ProductModalUser from '../components/ProductModalUser';
-
-
+import { Link } from 'react-router-dom';
 
 
 function Dashboard() {
 
-  
   const {products} = useLoaderData();
   const [productsData, setProductsData] = useState(products);
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,12 +31,19 @@ function Dashboard() {
     setShow(true)
   };
 
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const addToCart = async (product) => {
+    console.log("cart product array", cartProducts);
+    cartProducts.push(product);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
+  
 
   return (
     <>
     <SideBar/>
     <div className="container-gn" id="text">
-       <br />
+        <br />
       <h1> Sakura Kimonos</h1>
     <>
       <div className="container-bar">
@@ -53,7 +58,7 @@ function Dashboard() {
 
       <div className="cards">
         {data.map((product) => {
-         return (
+        return (
           <>
             <ProductModalUser show={show} handleClose={handleClose} product={productModal} />
               <Card border="light" style={{ width: '18rem' }}>
@@ -62,7 +67,9 @@ function Dashboard() {
                       <Card.Title>{product.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
-                    <Button variant="light"><BsCart3/> Add to cart </Button>
+                    <Link to='/Cart'>
+                    <Button variant="light" onClick={() => addToCart(product)} ><BsCart3/> Add to cart </Button>
+                    </Link>
                     </Card.Body>
               </Card>
           </>

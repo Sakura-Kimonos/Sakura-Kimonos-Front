@@ -8,7 +8,7 @@ import Join from "../pages/Join";
 import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
-//import ShoppingCart from "../pages/ShoppingCart";
+import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 
@@ -29,10 +29,15 @@ export const router = createBrowserRouter([
                         loader: loaderAdvertisement,
                     },
                     {
-                       // path: '/ShoppingCart/:CartId',
-                       // element: <ShoppingCart />,
-                       // loader: loaderCardUser,
+                       path: '/Cart/:CartId',
+                       element: <ShoppingCart />,
+                       //loader: loaderCardUser,
                     },
+                    {
+                        path: '/Cart',
+                        element: <ShoppingCart />,
+                        //loader: loaderCardUser,
+                     },
                     {
                         path: '/AddProduct',
                         element: <AddProduct />,
