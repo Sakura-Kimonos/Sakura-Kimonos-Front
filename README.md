@@ -70,9 +70,9 @@
 
 <h2 align="center">  🧪Next Steps:</h2>
 
-<p align-"center"> - Set up a functional Login service </p>
-<p align-"center"> - Improve validation process and security service as a whole </p> 
-<p align-"center"> - Implement categories filter in the navigation sidebar </p>  
+<p align="center"> - Set up a functional Login service </p>
+<p align="center"> - Improve validation process and security service as a whole </p> 
+<p align="center"> - Implement categories filter in the navigation sidebar </p>  
 
 
 <h2> -👩‍ 💻Group members:</h2>
