@@ -41,53 +41,79 @@ const UserProfile= () => {
   return (
     <>
     <SideBar/>
+    
+    <h1 class="text-center">My Account </h1>
+    
     <div className="container-form" >
-      <div class="row "> 
+      
      
         <form onSubmit={handleSubmit}  itemID="form1">
-          <h1>My Account</h1>
 
-        <div class="col-sm-2">
+        <div class="row">
+        
+          <div class="col-md-5 bg-warning text-dark" >
+
+          <div class="col-sm4">        
+            <GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p>
+            <GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p>            
+          </div> 
+
+
+          
+          </div>
+
+        <div class="col-md-7  bg-dark text-white">
 
           <div className="mb-3">       
             <label htmlFor=" name" className="form-label"> </label>
             <span focus name=" Name"  type="text" className="form-control" onChange={handleNameChange} required />
           </div>
 
-         <div className="mb-3">
-          <label htmlFor="last_Name" className="form-label"> </label>
-          <span  name="Last_Name" type="text"  className="form-control"  onChange={handleLast_NameChange} required />
-         </div>
+          <div className="mb-3">
+            <label htmlFor="last_Name" className="form-label"> </label>
+            <span  name="Last_Name" type="text"  className="form-control"  onChange={handleLast_NameChange} required />
+          </div>
 
           <div className="mb-3">
             <label className="form-label" htmlFor="phone_Number"> </label>
             <span  name="Phone_Number" type="text" className="form-control" id="input-Phone_Number" required  onChange={handlePhone_NumberChange} />
           </div>
 
-        
-              <button  type="submit"  className="btn btn-primary  btn-lg" id="btn-ad">My last Orders</button><br></br><br></br>
-              <button type="submit" className="btn btn-primary" id="btn-ad">My Favorite Address</button><br></br><br></br>
-              <button type="submit" className="btn btn-primary" id="btn-ad">Latest Payment Method</button>
-        
+          <div class="d-grid gap-3">
 
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+            <button class="btn btn-primary" type="button">Button</button>
+
+          </div>
+
+          
         </div>
 
-          <div class="col-sm3">        
-            <GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p>
-            <GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p>            
-          </div>     
-         
+
+
+
+          
+          
+        </div>
+
+
+    </form>
+          
+
+
+
+          
+        
+
+     
 
 
 
         
         
-            <div class="col-">
-            </div>  
-
-        </form>
        
-      </div>
+      
     </div>
   </>
   );
