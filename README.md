@@ -1,6 +1,6 @@
 # - Sakura-Kimonos-Front
 
- <h2 align="center"> - :kimono: Welcome to Sakura Kimonos!!!!</h2>
+ <h2 align="center"> :kimono: Welcome to Sakura Kimonos!!!!</h2>
 
 
  <div align="center"><img src="https://user-images.githubusercontent.com/117834362/226922234-ce15524f-26c2-4ff8-ac0f-c2053b1015e2.png"></div>
@@ -8,23 +8,23 @@
 
 
 
+ <h2 align="center"> :busts_in_silhouette:  Mision & Team </h2>
  
- 
- <h2 align="center"> :memo: - Projet Description: </h2>
+  <p align="center"> We are a team of Japanese fashion enthusiasts aiming for a more understanding and open-minded society, where fashion plays a crucial rol. We believe that fashion has built individual and collective identities for a long time. Now it's time for fashion to melt and adapt itself to new shapes, colors, features and fabrics. That is why in Sakura Kimonos we support the investigation and development of more environmentally responsible products, pacgkaging and commit to create sustainable importing routes.</p>
+   <p align="center">Inmerse yourself in Japanese culture and its fashion history while revisiting some of its most well-known garments, such as full-set Kimono, haori, yukata and so on. Explore Japanese fashion visual language through patterns, fabrics and accesories and create your own unique look with us! Share your experience in Sakura Kimonos and connect with other Sakura Kimonos' fans around the world.</p>
+
+
+ <h2 align="center"> :memo:  Projet Description: </h2>
  
 <p align="center">Sakura Kimonos is an e-commerce commited to sale the widest assortment of authentic Kimonos imported right from Japan. :jp:</p>
-
-<p align="center">Invest in an immersive experience in another ancestral culture through clothing, a unique experience of integration into a different society and feel that bond with other people in the world through visual language.</p>
-
-<p align="center">:cherry_blossom: Our logo is the mythical cherry blossom, in Japanese they are called sakura and it would not be an exaggeration to say that they are a national obsession.</p>
- 
- <p align="center">Inmerse yourself in Japanese culture and its fashion history while revisiting some of its most well-known garments, such as full-set Kimono, haori, yukata and so on. Explore Japanese fashion visual language through patterns, fabrics and accesories and create your own unique look with us! Share your experience in Sakura Kimonos and connect with other Sakura Kimonos' fans around the world.</p>
-
- <p align="center"> We are a team of Japanese fashion enthusiasts aiming for a more understanding and open-minded society, where fashion plays a crucial rol. We believe that fashion has built individual and collective identities for a long time. Now it's time for fashion to melt and adapt itself to new shapes, colors, features and fabrics. That is why in Sakura Kimonos we support the investigation and development of more environmentally responsible products, pacgkaging and commit to create sustainable importing routes.</p>
  <p align="center"> There is no planet B and Sakura Kimonos stands for responsible productions methods in order to reduce waste. We work with natural textile dyes and offers a wide variety of vegan fabrics options to choose from. Got any suggestion? We are here to listen and learn!</p>
 
+<p align="center">Invest in an immersive experience in another ancestral culture through clothing, a unique experience of integration into a different society and feel that bond with other people in the world through visual language.</p>
+ 
 
-<h2 align="center"> :camera: - Screenshots</h2>
+
+
+<h2 align="center"> :camera:  Screenshots</h2>
 
 | <a href="https://trello.com/b/uXQ3TO7Y/e-commerce">Trello</a> | <a href="https://www.figma.com/file/64inr6vpFqOsRp8V5BLpCl/SakuraKimonos?node-id=0-1&t=S0SMPu28KArf3gpZ-0">Figma</a> | 
 | :---: | :---: | 
@@ -32,12 +32,12 @@
 
 
 
-<h2 align="center"> -🔧Stacks:</h2>
+<h2 align="center"> 🔧Stacks:</h2>
 
 <p align="center">| Node.js | NPM | React |JavaScript | CSS3 | HTML5 | C# | ASP.NET Core 6 | Entity Framework 7 | SQL Server| Bootstrap |</p>
 
 
-<h2 align="center"> - Tools</h2>
+<h2 align="center">  Tools</h2>
 
 <p align="center">- Figma</p>
 <p align="center">- Trello</p>
@@ -48,7 +48,7 @@
 
 
 
-<h2 align="center"> - How to install the project (Front):</h2>
+<h2 align="center">  How to install the project (Front):</h2>
 
 <p align="center">1) Clone the repository</p>
 <p align="center">2) npm install</p>
@@ -60,15 +60,20 @@
 <h2 align="center"> - How to install the project (Back):</h2>
 
 
-<h2 align="center"> - 📚Methodology:</h2>
+<h2 align="center"> 📚Methodology:</h2>
 
 <p align="center">- Methodology Agile with Scrum.</p>
 <p align="center">- Mob Programming.</p>
 <p align="center">- Pair Programming.</p>
 
-<h2 align="center"> - 👀  Testing:</h2>
+<h2 align="center"> 👀  Testing:</h2>
 
-<h2 align="center"> - 🧪Next Steps:</h2>
+<h2 align="center">  🧪Next Steps:</h2>
+
+<p align-"center"> - Set up a functional Login service </p>
+<p align-"center"> - Improve validation process and security service as a whole </p> 
+<p align-"center"> - Implement categories filter in the navigation sidebar </p>  
+
 
 <h2> -👩‍ 💻Group members:</h2>
 
