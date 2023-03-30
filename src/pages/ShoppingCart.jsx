@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../pages/styleSheetPages/ShoppingCart.css'
-
+import Navbar from '../components/Navbar';
 
 
 
@@ -34,7 +34,8 @@ const Cart = () => {
 
 
 return (
-    
+    <>
+    <Navbar/>  
 <div className='header-cart'>
 <h1>Your Shopping Cart</h1><Button className="remove" onClick={() => removeCartProducts()}>Empty Cart</Button>
 
@@ -64,17 +65,19 @@ return (
         </Card>
         ))}
         <div>
-        <h3>Quantity total</h3>
+        <br />
+        <br />   
+        <h3>Amount to Pay</h3>
         <h3>{`Total: ${totalPrice}`}$</h3>
-        
+        <br />
         </div>
         <br />
-        <Button className='buy' type="submit" id="btn" >To Buy</Button>
+        <Button className='buy' type="submit" id="btn" style={{width: '100px'}} >To Buy</Button>
         <br />
         <br />
     </div>    
 </div>
-
+</>
 );
 };
 
