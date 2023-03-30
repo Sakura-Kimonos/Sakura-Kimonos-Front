@@ -31,7 +31,6 @@ const Cart = () => {
         return total + product.price;
         }, 0);
 
-
 return (
     <>
     <Navbar/>  
@@ -53,9 +52,7 @@ return (
         </Card>
     </React.Fragment>
         ))}
-        
-        
-    
+
         <Card style={{backgroundColor: '#D6C6B4', border: ' none', borderRadius: '10px', textAlign: 'center'}}>
         
         <div className="container-bar" id="text">
@@ -70,7 +67,6 @@ return (
         </div>
         <Card.Title style={{marginBottom: '15px', marginTop: '20px', backgroundColor: '#D6C6B4'}} >You can pay with:</Card.Title>
         <br />
-        
             <Row  >
                 <Col ><img src={visa} alt="visa"  style={{height: 60, marginTop: '10px'}}/></Col>
                 <Col ><img src={paypal} alt="paypal" style={{height: 60, marginTop: '12px'}}/></Col>
@@ -78,14 +74,10 @@ return (
                 <Col><img src={mastercard} alt="mastercard" style={{height: 60, marginTop: '20px'}}/></Col>
                 </Row>
         </Card>
-            
-        
     </div>
         <br />
         <br />
     </div>    
-
-
 </>
 );
 };
