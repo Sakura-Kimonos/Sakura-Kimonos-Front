@@ -43,7 +43,6 @@ function SideBar() {
 
   return (
     <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
-        {/* <img src="src/assets/logo.png" alt="logo" />  */}
         <div className="sidebar-collapse">
       {collapsed ? (
         <BsArrowBarRight

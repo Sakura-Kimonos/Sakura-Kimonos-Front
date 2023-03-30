@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import {  useLoaderData } from "react-router-dom";
 import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 import '../pages/styleSheetPages/UserDashboard.css';
-import SideBar from '../components/SideBar';
+import SideBarLogged from '../components/SideBarLogged';
 import ProductModalUser from '../components/ProductModalUser';
 import { Link } from 'react-router-dom';
 import { productService } from "../services/productService";
@@ -60,7 +60,7 @@ function Dashboard() {
 
   return (
     <>
-    <SideBar/>
+    <SideBarLogged/>
     <div className="container-gn" id="text">
         <br />
       <h1> Sakura Kimonos</h1>

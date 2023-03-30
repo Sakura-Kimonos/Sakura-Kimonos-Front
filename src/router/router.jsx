@@ -13,7 +13,8 @@ import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 import EditProduct from "../pages/EditProduct"
 import Kimonos from "../pages/Kimonos"
-import Yukata from "../pages/Yukata"
+import Yukata from "../pages/Yukata";
+import UserProfile from "../pages/UserProfile";
 
 
 export const router = createBrowserRouter([
@@ -59,9 +60,9 @@ export const router = createBrowserRouter([
                         loader: loaderAdvertisement,
                     }, 
                     {
-                        path: '/yukata',
-                        element: <Yukata />,
-                        loader: loaderAdvertisement,
+                        path: '/userProfile',
+                        element: <UserProfile />,
+                        // loader: loaderAdvertisement,
                     },  
                     {
                         path: '/admDashboard',

@@ -94,7 +94,7 @@ function SideBar() {
         </div>
         <div className="second-block"> 
         <li>
-          <a href="#">
+          <a href="/userProfile">
             <BsFillHouseHeartFill className="sidebar-icon" />
             {!collapsed && <span className="sidebar-text"> Your profile </span>}
           </a>
