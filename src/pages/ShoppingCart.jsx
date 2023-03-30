@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../pages/styleSheetPages/ShoppingCart.css'
 import Navbar from '../components/Navbar';
-
+import { BsSearchHeart,  BsTrash, BsX } from 'react-icons/bs';
 
 
 const Cart = () => {
@@ -36,35 +36,25 @@ const Cart = () => {
 return (
     <>
     <Navbar/>  
-<div className='header-cart'>
+<div className="container-gn" id="text">
 <h1>Your Shopping Cart</h1><Button className="remove" onClick={() => removeCartProducts()}>Empty Cart</Button>
 
 <br />
 
-    <div className="container-gn"  >
+    <div className="cards" >
     {cartProducts.map((product) => (
-        <Card className="card" style={{ backgroundColor: "#fdccbc" }} key={product.id}>
-            <div className="container-bar">
-
-            <div className= "img-cart"  >
-                    <img variant="top" style={{width: '150px'}} src={product.img} alt="" />
-                <h2>{product.title}</h2>
-                <br />
-                <h3>{product.price}$</h3>
-                <br />
-                <div>
-                <h3>
-            
-                </h3>
-                </div>
-                <Button variant="outline-primary" style={{width: '100px'}}  onClick={() => handleRemove(product.id)}>Delete</Button>
-                </div>  
-            </div>
-            <div>       
-            </div>
-        </Card>
+     <React.Fragment key={product.id}>
+     <Card border="light" style={{ width: '18rem' }}>
+       <Card.Img variant="top" src={product.img} />
+       <Card.Body className='text-center'>
+         <Card.Title>{product.title} </Card.Title>
+         <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
+         <Button variant="outline-primary" style={{width: '100px'}}  onClick={() => handleRemove(product.id)}><BsTrash />Delete</Button>
+       </Card.Body>
+     </Card>
+   </React.Fragment>
         ))}
-        <div>
+       <div className="container-bar" id="text">
         <br />
         <br />   
         <h3>Amount to Pay</h3>
