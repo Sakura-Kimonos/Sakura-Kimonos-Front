@@ -12,10 +12,10 @@ import slide4 from "../assets/slide4.png"
 function Slide() {
   return (
     <div className="d-flex justify-content-center align-items-center">
-    <div className="row">
+    <div className="">
       <div className="col-md-8 offset-md-2">
     <Carousel >
-      <Carousel.Item className='slide'>
+      <Carousel.Item className='position'>
         <img
           className="d-block w-100"
           src={slide1}
@@ -23,7 +23,7 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='position'>
         <img
           className="d-block w-100"
           src={slide2}
@@ -31,7 +31,7 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='position'> 
         <img
           className="d-block w-100"
           src={slide3}
@@ -39,11 +39,11 @@ function Slide() {
     
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className='position'>
         <img
           className="d-block w-100"
           src={slide4}
-          alt="Third slide"
+          alt="Fourth slide"
     
         />
       </Carousel.Item>
