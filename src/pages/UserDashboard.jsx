@@ -15,18 +15,25 @@ function Dashboard() {
   // const {products} = useLoaderData();
   const [productsData, setProductsData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedSeason, setSelectedSeason] = useState("");
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
   const data = productsData.filter((product) => {
-    return product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
+    // return product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
+    const lowerCaseSeason = product.producItem.season.toLowerCase();
+    const isSeasonMatch = selectedSeason ? lowerCaseSeason === selectedSeason.toLowerCase() : true;
+    const isSearchMatch = product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
+    return isSeasonMatch && isSearchMatch;
   });
+
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
     setProductModal(productsData.find(product => product.producItem.id == productId));
-    // console.log(productsData);
+    
     setShow(true)
   };
 
@@ -49,13 +56,22 @@ function Dashboard() {
     <div className="container-gn" id="text">
        <br />
       <h1> Sakura Kimonos</h1>
-    <>
       <div className="container-bar">
-        <input className="searchStyle" type="text" placeholder="Search by product name or price"
+        <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
           value={searchQuery}
           onChange={handleSearchChange}
         />
       </div>
+      <div>Search by season
+  {/* <h5> Search by season</h5> */}
+  <select className="season-select" value={selectedSeason} onChange={(e) => setSelectedSeason(e.target.value)}>
+    <option value="">All seasons</option>
+    <option value="Spring">Spring</option>
+    <option value="Summer">Summer</option>
+    <option value="Autumn">Autumn</option>
+    <option value="Winter">Winter</option>
+  </select>
+  </div>
       <div className="cards">
         {data.map((product) => {
          return (
@@ -65,6 +81,7 @@ function Dashboard() {
                     <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                     <Card.Body className='text-center'>
                       <Card.Title>{product.producItem.title} </Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">{product.producItem.season}</Card.Subtitle>
                       <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart/> View </Button>
                     <Button variant="light"><BsCart3/> Add to cart </Button>
@@ -74,9 +91,8 @@ function Dashboard() {
           )
         })}
       </div>
+      </div>
     </>
-    </div>
-  </>
   );
 }
 export default Dashboard;

@@ -35,17 +35,14 @@ export const productHandler = {
         var result = await  productService.getProducts();
         return result; 
     },
-    // async loadImages(){
-    //     var resultImages = await productService.getImages();
-    //     return resultImages; 
-    // },
+  
     loadProduct(id) {
         return productService.getProduct(id);
     },
     deleteProduct(id) {
         return productService.deleteProduct(id);
     },
-    updateProduct(id, updatedProduct) {
+    updateProduct(updatedProduct) {
         if (!updatedProduct) {
             return;
         }
@@ -56,6 +53,7 @@ export const productHandler = {
 
         let updatedProductRequestModel = {
             "productData": {
+                "id": updatedProduct.id,
                 "title": updatedProduct.title,
                 "description": updatedProduct.description,
                 "price": updatedProduct.price,
@@ -71,7 +69,7 @@ export const productHandler = {
             }
         }
 
-        return productService.updateProduct(id, updatedProductRequestModel);
+        return productService.updateProduct(updatedProductRequestModel);
     }
 }
 

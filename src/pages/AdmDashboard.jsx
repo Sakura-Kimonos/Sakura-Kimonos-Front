@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import { BsSearchHeart, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs';
 import '../pages/styleSheetPages/AdmDashboard.css'
@@ -59,7 +59,7 @@ function Dashboard() {
 
   function buildImg(extension, content) {
     return "data:" + extension + ";base64," + content;
-}
+  }
 
   useEffect(() => {
     getProducts()
@@ -68,7 +68,7 @@ function Dashboard() {
   return (
     <>
       <SideBar />
-      <div className="container-gn" id="text">
+      <div className="container-gn" id="text" >
         <br />
         <h1> Sakura Kimonos</h1>
         <>
@@ -94,7 +94,7 @@ function Dashboard() {
                       <Card.Title>{product.producItem.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
                       <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart /> View </Button>
-                      <Button variant="light" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
+                      <Link to={`editProduct/${product.producItem.id}`}> <Button variant="light" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare/> Edit </Button> </Link> 
                       <Button variant="light" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Delete </Button>
                     </Card.Body>
                   </Card>

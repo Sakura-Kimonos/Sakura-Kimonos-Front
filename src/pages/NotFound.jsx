@@ -16,8 +16,7 @@ const NotFound = () => {
         <SakuraAnimation /> 
         <Link to="/">Please click here to return to the home page</Link>
         <br></br>
-      
-        <img src="src/assets/LogoSakura1.png" alt="logo" />
+        {/* <img src="src/assets/LogoSakura1.png" alt="logo" /> */}
       </div>
     );
   };
