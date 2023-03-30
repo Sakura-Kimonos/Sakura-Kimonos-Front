@@ -43,7 +43,7 @@ return (
 
     <div className="container-gn"  >
     {cartProducts.map((product) => (
-        <Card className="cards" key={product.id}>
+        <Card className="card" style={{ backgroundColor: "#fdccbc" }} key={product.id}>
             <div className="container-bar">
 
             <div className= "img-cart"  >
