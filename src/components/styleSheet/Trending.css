@@ -100,12 +100,12 @@
 
     }
 
-    .card:hover {
-        opacity: 0.8;
+     .card:hover {
+        /* opacity: 0.8; */
         cursor: pointer;
         transform: none;
         box-shadow: none;
-    }
+    } 
 
     .container-bar {
 

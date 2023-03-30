@@ -6,19 +6,20 @@ import './styleSheet/Trending.css';
 import React, {useState, useEffect} from 'react';
 import ProductModalUser from './ProductModalUser'; 
 import '../pages/styleSheetPages/userDashboard.css'
-
+import { Link } from 'react-router-dom';
+import { productService } from '../services/productService';
 
 function Trending({products}) {
 
   const randomIndex = Math.floor(Math.random() * (products.length - 3));
   const resultTrending = products.slice(randomIndex, randomIndex + 3);
+  const [productsData, setProductsData] = useState([]);
   const [productList, setProductList] = useState(resultTrending);
   const [productModal, setProductModal] = useState({});
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
     setProductModal(products.find(product => product.producItem.id == productId))
-    // console.log(productModal)
     setShow(true)
   };
 
@@ -29,6 +30,13 @@ function Trending({products}) {
 
   function buildImg(extension, content) {
     return "data:" + extension + ";base64," + content;
+}
+
+const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+const addToCart = async (product) => {
+  console.log("cart product array", cartProducts);
+  cartProducts.push(product);
+  localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 }
 
   useEffect(() => {
@@ -51,7 +59,9 @@ function Trending({products}) {
                       <Card.Title>{product.producItem.title} </Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart/> View </Button>
-                    <Button variant="light"><BsCart3/> Add to cart </Button>
+                    <Link to={`/Cart`}>
+                    <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button>
+                    </Link>
                     </Card.Body>
               </Card>
               </div>

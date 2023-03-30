@@ -8,7 +8,7 @@ import Join from "../pages/Join";
 import Login from "../pages/Login";
 import UserDashboard from "../pages/UserDashboard";
 import AdmDashboard from "../pages/AdmDashboard";
-// import ShoppingCart from "../pages/ShoppingCart";
+import ShoppingCart from "../pages/ShoppingCart";
 import CookiesPolicy from "../components/CookiesPolicy";
 import ContactUs from '../pages/ContactUs';
 import EditProduct from "../pages/EditProduct"
@@ -28,25 +28,25 @@ export const router = createBrowserRouter([
                         element:<Home />, 
                         loader: loaderAdvertisement,
                     },
-                    // {
-                    //     path: '/cart',
-                    //     element: <ShoppingCart />,
-                    //     loader: loaderCardUser,
-                    // }, 
+                    {
+                       path: '/Cart/:CartId',
+                       element: <ShoppingCart />,
+                    },
+                    {
+                        path: '/Cart',
+                        element: <ShoppingCart />,
+                     },
                     {
                         path: '/AddProduct',
                         element: <AddProduct />,
-                        // loader: loaderCardUser
                     }, 
                     {
                         path: '/join',
                         element: <Join />,
-                        // loader: loaderCardUser
                     },
                     {
                         path: '/login',
                         element: <Login />,
-                        // loader: loaderCardUser
                     },
                     {
                         path: '/userDashboard',
@@ -73,14 +73,6 @@ export const router = createBrowserRouter([
                         element: <ContactUs />,
                         loader: loaderAdvertisement,
                     },  
-
-                    // {
-                    //     path: '/cart',
-                    //     element: <ShoppingCart />,
-                    //     // loader: loaderAdvertisement,
-                    // },  
-                    
-                
                     {
                         path: "admDashboard/editProduct/:id",
                         element: <EditProduct />,
@@ -91,11 +83,11 @@ export const router = createBrowserRouter([
                         path: '/CookiesPolicy',
                         element:<CookiesPolicy/>
                         
-                     },
+                    },
                 
                 ]
             },
-         
+        
     //     ]
     // },   
 ]);
@@ -106,7 +98,7 @@ async function loaderCardUser  ({ params })  {
 };
 
 async function loaderAdvertisement () {
- const products = await productHandler.loadProducts()
+    const products = await productHandler.loadProducts()
     return { products };
- };
+    };
 

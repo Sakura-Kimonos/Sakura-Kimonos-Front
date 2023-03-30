@@ -1,4 +1,6 @@
-
+.modal-backdrop.show {
+    opacity: 0.2;
+} 
 
   #root {
     height: 100vh;
@@ -33,7 +35,7 @@
 }
 
 .card:hover {
-     opacity: 0.8; 
+     /* opacity: 0.8;  */
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 10 10px rgba(255, 255, 255, 0.787);
@@ -49,7 +51,6 @@
 }
 
 .container-bar {
-
     margin-bottom: .625rem;
     align-items: center;
 }

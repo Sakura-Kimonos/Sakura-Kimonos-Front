@@ -5,17 +5,16 @@ import {BsCart3} from 'react-icons/bs';
 import React,{ useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import './styleSheet/ProductModalUser.css'
+import { Link } from 'react-router-dom';
 import { productService } from "../services/productService";
 
 
 
 const ProductModalUser = ({ show, handleClose, productModal}) => {
-  console.log(productModal);
   const [productsData, setProductsData] = useState([]);
 
   async function getProducts() {
     var resultList = await productService.getProducts();
-    // console.log(resultList);
     setProductsData(resultList);
   }
 
@@ -24,11 +23,13 @@ const ProductModalUser = ({ show, handleClose, productModal}) => {
   }
 
 
-  // const handleShow = (productId) => {
-  //   setProductModal(productsData.find(product => product.producItem.id == productId));
-  //   setShow(true)
-  // };
- 
+const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const addToCart = async (product) => {
+    console.log("cart product array", cartProducts);
+    cartProducts.push(product);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
+  
   useEffect(() => {
     getProducts()
   },[])
@@ -45,7 +46,7 @@ const ProductModalUser = ({ show, handleClose, productModal}) => {
                            <p className='text-center' style={{marginTop: '20px'}}>  {productModal?.producItem?.description}  </p>
                            <h4 className='text-center' style={{marginTop: '20px'}}>  {productModal?.producItem?.price}$ </h4>
                         
-                           <Table striped bordered hover>
+                            <Table striped bordered hover>
                               <tbody>
                                 <tr>
                                   <td><strong>Category</strong></td>
@@ -65,7 +66,11 @@ const ProductModalUser = ({ show, handleClose, productModal}) => {
                                 </tr>
                               </tbody>
                             </Table>
-                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> <Button variant="light"><BsCart3/> Add to cart </Button> </div> 
+                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> 
+                            <Link to={`/Cart`}>
+                            <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button>
+                            </Link>
+                            </div> 
                   </div>
         </Modal.Body>
       </Modal>

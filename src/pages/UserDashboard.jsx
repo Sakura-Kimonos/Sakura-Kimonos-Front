@@ -7,6 +7,7 @@ import {BsSearchHeart, BsCart3} from 'react-icons/bs';
 import '../pages/styleSheetPages/UserDashboard.css';
 import SideBar from '../components/SideBar';
 import ProductModalUser from '../components/ProductModalUser';
+import { Link } from 'react-router-dom';
 import { productService } from "../services/productService";
 
 
@@ -46,6 +47,13 @@ function Dashboard() {
     return "data:" + extension + ";base64," + content;
   }
 
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const addToCart = async (product) => {
+    console.log("cart product array", cartProducts);
+    cartProducts.push(product);
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
+  
   useEffect(() => {
     getProducts()
   },[])
@@ -54,7 +62,7 @@ function Dashboard() {
     <>
     <SideBar/>
     <div className="container-gn" id="text">
-       <br />
+        <br />
       <h1> Sakura Kimonos</h1>
       <div className="container-bar">
         <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
@@ -63,7 +71,6 @@ function Dashboard() {
         />
       </div>
       <div>Search by season
-  {/* <h5> Search by season</h5> */}
   <select className="season-select" value={selectedSeason} onChange={(e) => setSelectedSeason(e.target.value)}>
     <option value="">All seasons</option>
     <option value="Spring">Spring</option>
@@ -74,7 +81,7 @@ function Dashboard() {
   </div>
       <div className="cards">
         {data.map((product) => {
-         return (
+        return (
           <>
             <ProductModalUser show={show} handleClose={handleClose} productModal={productModal} />
               <Card border="light" style={{ width: '18rem' }}>
@@ -84,7 +91,9 @@ function Dashboard() {
                       <Card.Subtitle className="mb-2 text-muted">{product.producItem.season}</Card.Subtitle>
                       <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart/> View </Button>
-                    <Button variant="light"><BsCart3/> Add to cart </Button>
+                    <Link to='/Cart'>
+                    <Button variant="light" onClick={() => addToCart(product)} ><BsCart3/> Add to cart </Button>
+                    </Link>
                     </Card.Body>
               </Card>
           </>

@@ -4,6 +4,7 @@ import {BsPencilSquare, BsTrash, BsX, BsSearchHeart } from 'react-icons/bs';
 import Button from "react-bootstrap/Button";
 import React,{ useState, useEffect } from "react";
 import { productService } from "../services/productService";
+import '../components/styleSheet/ProductModalAdm.css'
 
 
 

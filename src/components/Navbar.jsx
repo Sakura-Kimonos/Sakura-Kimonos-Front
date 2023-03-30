@@ -40,7 +40,8 @@ export default function App() {
                 <MDBNavbarLink active aria-current='page' href='/login' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item '>LOGIN</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='/cart' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'><BsFillCartFill/></MDBNavbarLink>
+                <MDBNavbarLink active aria-current='page' href='/cart' className='text-white d-flex justify-content-center justify-content-lg-between p-4 navbar-item'>
+                  <BsFillCartFill/></MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
             
