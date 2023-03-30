@@ -14,6 +14,7 @@ const ProductModalUser = ({ show, handleClose, productModal}) => {
   const [productsData, setProductsData] = useState([]);
 
   async function getProducts() {
+   
     var resultList = await productService.getProducts();
     setProductsData(resultList);
   }
@@ -25,7 +26,6 @@ const ProductModalUser = ({ show, handleClose, productModal}) => {
 
 const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
   const addToCart = async (product) => {
-    console.log("cart product array", cartProducts);
     cartProducts.push(product);
     localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
   }
@@ -43,7 +43,7 @@ const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
         <Modal.Body>
                   <div id="modal" className="modal-body" style={{ width: '100%'}} border="light">
                         <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> <img variant="top" style={{width: '350px'}} src={buildImg(productModal?.base64FileModel?.extension, productModal?.base64FileModel?.content)} /> </div>
-                           <p className='text-center' style={{marginTop: '20px'}}>  {productModal?.producItem?.description}  </p>
+                           <p className='text-center' style={{marginTop: '20px'}}>  {productModal?.producItem?.description} </p>
                            <h4 className='text-center' style={{marginTop: '20px'}}>  {productModal?.producItem?.price}$ </h4>
                         
                             <Table striped bordered hover>

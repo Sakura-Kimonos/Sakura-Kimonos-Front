@@ -47,48 +47,45 @@ const Cart = () => {
 return (
     <>
     <Navbar/>  
-<div className="container-gn" id="text">
-<h1>Your Shopping Cart</h1>
-<Button className="remove" style={{backgroundColor: "#CB5F5F",}} onClick={() => removeCartProducts()}>Empty Cart</Button>
-
-<br />
-
-    <div className="cards" >
-    {cartProducts.map((product) => (
-        <React.Fragment key={product.producItem.id}>
-        <Card border="light" style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
-        <Card.Body className='text-center'>
-            <Card.Title>{product.producItem.title} </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
-            <Button variant="outline-primary" style={{width: '100px'}}  onClick={() => handleRemove(product.producItem.id)}><BsTrash />Delete</Button>
-        </Card.Body>
-        </Card>
-    </React.Fragment>
-        ))}
-
-        <Card style={{backgroundColor: '#D6C6B4', border: ' none', borderRadius: '10px', textAlign: 'center'}}>
-        
-        <div className="container-bar" id="text">
+    <div className="container-gn" id="text">
+        <h1 style={{marginTop: 30}}>Your Shopping Cart</h1>
+        <Button className="remove" style={{backgroundColor: "#CB5F5F"}} onClick={() => removeCartProducts()}>Empty Cart</Button>
         <br />
-        <br />   
-        <h3></h3>
-        <h3>{`Total: ${totalPrice}`}$</h3> 
-        <h6>*Taxes included</h6> 
-        <br />  
-        <Button className='buy' type="submit" id="btn" style={{width: '100px'}} >To Pay</Button>
-        <br />
+        <div className="cards" >
+            {cartProducts.map((product) => (
+            <React.Fragment key={product.producItem.id}>
+                <Card border="light" style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
+                <Card.Body className='text-center'>
+                    <Card.Title>{product.producItem.title} </Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
+                    <Button variant="outline-primary" style={{width: '100px'}}  onClick={() => handleRemove(product.producItem.id)}><BsTrash />Delete</Button>
+                </Card.Body>
+                </Card>
+            </React.Fragment>
+                ))}
+
+            <Card style={{backgroundColor: '#D6C6B4', border: ' none', borderRadius: '10px', textAlign: 'center'}}>
+                    <div className="container-bar" id="text">
+                        <br />
+                        <br />   
+                        <h3>{`Total: ${totalPrice}`}$</h3> 
+                        <h6>*Taxes included</h6> 
+                        <br />  
+                        <Button className='buy' type="submit" id="btn" style={{width: '120px', backgroundColor: "#CB5F5F"}} >Checkout </Button>
+                        <br />
+                    </div>
+                    <Card.Title style={{marginBottom: '15px', marginTop: '20px', backgroundColor: '#D6C6B4'}} >You can pay with:</Card.Title>
+                    <div className="pay-icons"> 
+                        <img src={visa} alt="visa"  style={{height: 40, }}/>
+                        <img src={paypal} alt="paypal" style={{height: 40}}/>
+                    
+                    
+                        <img src={gpay} alt="gpay" style={{height: 40}}/>
+                        <img src={mastercard} alt="mastercard" style={{height: 40}}/>
+                    </div> 
+            </Card>
         </div>
-        <Card.Title style={{marginBottom: '15px', marginTop: '20px', backgroundColor: '#D6C6B4'}} >You can pay with:</Card.Title>
-        
-            <Row  >
-                <Col ><img src={visa} alt="visa"  style={{height: 60, marginTop: '10px'}}/></Col>
-                <Col ><img src={paypal} alt="paypal" style={{height: 60, marginTop: '12px'}}/></Col>
-                <Col ><img src={gpay} alt="gpay" style={{height: 60, marginTop: '20px'}}/></Col>
-                <Col><img src={mastercard} alt="mastercard" style={{height: 60, marginTop: '20px'}}/></Col>
-                </Row>
-        </Card>
-    </div>
         <br />
         <br />
     </div>    

@@ -52,10 +52,10 @@ function Dashboard() {
               <Card border="light" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={product.img}  />
                     <Card.Body className='text-center'>
-                      <Card.Title>{product.title} </Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">{product.season}</Card.Subtitle>
-                      <Card.Subtitle className="mb-2 text-muted">${product.price}</Card.Subtitle>
-                    <Button variant="light" onClick={() => handleShow(product.id)}><BsSearchHeart/> View </Button>
+                      <Card.Title>{product.producItem.title} </Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">{product.producItem.season}</Card.Subtitle>
+                      <Card.Subtitle className="mb-2 text-muted">${product.producItem.price}</Card.Subtitle>
+                    <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsSearchHeart/> View </Button>
                     <Button variant="light"><BsCart3/> Add to cart </Button>
                     </Card.Body>
               </Card>

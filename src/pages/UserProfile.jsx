@@ -42,7 +42,7 @@ const UserProfile= () => {
     <>
     <SideBar/>
     
-    <h1 className="text-center">My Account </h1>
+    <h1 className="text-center profile-headline">My Account </h1>
     
     <div className="container-form" >
       <form onSubmit={handleSubmit}  itemID="form1">
@@ -50,29 +50,26 @@ const UserProfile= () => {
         <div className="col-md-5 text-dark" > 
         <div className="profile">
 
-          <center><img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="200"></img></center>
-          <center><button className="btn btn-primary" type="button">UNPLOAD NEW PHOTO</button></center>
-
+          <img src="https://i.imgur.com/JgYD2nQ.jpg" className="rounded-circle" style={{width: 150}}></img>
+          <button className="btn btn-primary" type="button" style={{backgroundColor: "#CB5F5F", marginTop: 30}}>UNPLOAD NEW PHOTO</button>
         </div>
-
-         <center><GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p></center>
-         <center><GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p></center>          
-      
+        <div style={{marginTop: 20}}> 
+         <p  name="document-text-outline"><GrFavorite/> Wish List</p>
+         <p  name="document-text-outline"><GoMail/> MailBox </p>    
+        </div>      
         </div>
          <div className="col-md-7">
 
           <div>
-
-             <div className="div1 bg-white text-dark"><span>NAME</span></div>
-             <div className="div2 bg-white text-dark"><span>LAST NAME</span></div>
-             <div className="div3 bg-white text-dark"><span>PHONE NUMBER</span></div>
-
+             <div className="div1 bg-white text-dark"> <p> NAME  </p> </div>
+             <div className="div2 bg-white text-dark" ><p> LAST NAME</p></div>
+             <div className="div3 bg-white text-dark" ><p>PHONE NUMBER</p></div>
           </div>
         <div className="d-grid gap-3">
         
-          <button className="btn btn-primary" type="button" >My Last Orders</button>
-          <button className="btn btn-primary" type="button" >My Favorite Address</button>
-          <button className="btn btn-primary" type="button" >Latest Payment Method</button>
+          <button className="btn btn-primary" type="button" style={{backgroundColor: "#CB5F5F"}} >My Last Orders</button>
+          <button className="btn btn-primary" type="button"  style={{backgroundColor: "#CB5F5F"}}>My Favorite Address</button>
+          <button className="btn btn-primary" type="button"  style={{backgroundColor: "#CB5F5F"}}>Latest Payment Method</button>
 
         </div>   
       </div>   

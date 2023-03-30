@@ -10,7 +10,7 @@ import '../components/styleSheet/Footer.css'
 export default function Footer() {
     return (
         
-      <MDBFooter  className='small text-center text-lg-start text-muted' style={{  backgroundColor: "#CB5F5F", position: "float", bottom: 0 }}  >
+      <MDBFooter  className='small text-center text-lg-start text-muted' style={{backgroundColor: "#CB5F5F", position: "float"}} >
         <section  size="sm"className='small text-sm text-white d-flex justify-content-center justify-content-lg-between p-4 border-bottom' id="Footer">
           <div className='text-sm  me-5 d-none d-lg-block'>
           </div>
@@ -39,11 +39,11 @@ export default function Footer() {
         </section>
   
         <section className='Footer'>
-          <MDBContainer className='text-white text-center text-md-start mt-5'>
+          <MDBContainer className='text-white text-center text-md-start mt-5 footer-style'>
             <MDBRow className='mt-3'>
               <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4'>
-                  <MDBIcon icon="gem" className="me-3" />
+                  <MDBIcon icon="gem"/>
                   SakuraKimonos
                 </h6>
                 <p>
@@ -89,7 +89,7 @@ export default function Footer() {
                 </p>                
               </MDBCol>
   
-              <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+              <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4 w-auto'>
                 <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                 <p>
                   <MDBIcon icon="home" className="me-2" />

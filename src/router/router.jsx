@@ -78,8 +78,7 @@ export const router = createBrowserRouter([
                         path: "admDashboard/editProduct/:id",
                         element: <EditProduct />,
                         loader: loaderCardUser, 
-                    },
-                        
+                    },    
                     {
                         path: '/CookiesPolicy',
                         element:<CookiesPolicy/>

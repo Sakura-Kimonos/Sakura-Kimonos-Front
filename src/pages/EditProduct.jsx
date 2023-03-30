@@ -104,7 +104,7 @@ function EditProduct() {
             <div className="container-form">
                 <form onSubmit={handleSubmit} itemID="form1">
                 <h1>Edit Product</h1>
-                <Link to="/admDashboard"> <button type="submit" className="btn btn-primary" id="btn" href="/admDashboard"> Return to your dashboard </button> </Link>
+                <Link to="/admDashboard"> <button type="submit" className="btn btn-primary" id="btn" href="/admDashboard" style={{backgroundColor: "#CB5F5F"}}> Return to your dashboard </button> </Link>
                     <div className="mb-3">
                         <label htmlFor="title" className="form-label">Title</label>
                         <input name="title" type="text" className="form-control" placeholder={CardUser.title} onChange={handleTitleChange} />

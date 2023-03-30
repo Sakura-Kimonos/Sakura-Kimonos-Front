@@ -38,6 +38,7 @@ export const userService = {
             Swal.fire({ 
             icon: 'success', 
             title: 'New user registered', 
+            text: 'Check your inbox for confirmation email!',
             showConfirmButton: true, 
             showClass: { popup: 'animate__animated animate__fadeInDown' }, 
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })   

@@ -36,6 +36,7 @@
     background-color: #85BBA8;
     color: white;
     text-align: center;
+    
 
 
 }
@@ -79,6 +80,15 @@
 .my-button:hover {
     background-color: #c82333;
 }
+
+.pay-icons{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
 
 @media (max-width: 414px) {
     .card {

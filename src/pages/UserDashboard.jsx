@@ -13,7 +13,7 @@ import { productService } from "../services/productService";
 
 function Dashboard() {
 
-  // const {products} = useLoaderData();
+  
   const [productsData, setProductsData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSeason, setSelectedSeason] = useState("");
@@ -22,7 +22,7 @@ function Dashboard() {
     setSearchQuery(event.target.value);
   };
   const data = productsData.filter((product) => {
-    // return product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
+   
     const lowerCaseSeason = product.producItem.season.toLowerCase();
     const isSeasonMatch = selectedSeason ? lowerCaseSeason === selectedSeason.toLowerCase() : true;
     const isSearchMatch = product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
