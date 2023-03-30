@@ -47,64 +47,66 @@ const UserProfile= () => {
     <div className="container-form" >
       
      
-        <form onSubmit={handleSubmit}  itemID="form1">
+      <form onSubmit={handleSubmit}  itemID="form1">
 
-        <div class="row">
+       
+      <div class="row">
         
-          <div class="col-md-5 bg-warning text-dark text-center position-relative" >
+        <div class="col-md-5 text-dark" >
 
-           
+        <div class="profile">
 
-            <div class="bg-danger position-absolute top-50 start-50 translate-middle">
+          <center><img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="200"></img></center>
+          <center><button class="btn btn-primary" type="button" className="btn btn-info">UNPLOAD NEW PHOTO</button></center>
 
-             <GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p>
-             <GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p>            
-          
-            </div>
-
-          
-          </div>
-
-        <div class="col-md-7 bg-dark">
-
-         
-          <div className="mb-3">       
-            <label htmlFor=" name" className="form-label"> </label>
-            <span focus name=" Name"  type="text" className="form-control" onChange={handleNameChange} required />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="last_Name" className="form-label"> </label>
-            <span  name="Last_Name" type="text"  className="form-control"  onChange={handleLast_NameChange} required />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label" htmlFor="phone_Number"> </label>
-            <span  name="Phone_Number" type="text" className="form-control" id="input-Phone_Number" required  onChange={handlePhone_NumberChange} />
-          </div>
-
-         
-
-          <div class="d-grid gap-3">
-          
-            <button class="btn btn-primary" type="button" class="btn btn-info">My Last Orders</button>
-            <button class="btn btn-primary" type="button" class="btn btn-info">My Favorite Addres</button>
-            <button class="btn btn-primary" type="button" class="btn btn-info">Latest Payment Method</button>
-
-          </div>
-
-          
         </div>
 
-
-
-
-          
-          
+         <center><GrFavorite name="document-text-outline"><GrFavorite/></GrFavorite><p> Wish List</p></center>
+         <center><GoMail name="document-text-outline"><GoMail/></GoMail><p> MailBox</p></center>          
+      
         </div>
 
+      
+      
+         <div class="col-md-7">
 
-    </form>
+          <div>
+
+             <div class="div1 bg-white text-dark"><span>NAME</span></div>
+             <div class="div2 bg-white text-dark"><span>LAST NAME</span></div>
+             <div class="div3 bg-white text-dark"><span>PHONE NUMBER</span></div>
+
+          </div>
+
+        
+
+       
+
+        <div className="d-grid gap-3">
+        
+          <button class="btn btn-primary" type="button" className="btn btn-info">My Last Orders</button>
+          <button class="btn btn-primary" type="button" className="btn btn-info">My Favorite Address</button>
+          <button class="btn btn-primary" type="button" className="btn btn-info">Latest Payment Method</button>
+
+        </div>
+
+        
+      </div>
+
+
+
+
+        
+        
+      </div>
+
+
+
+
+
+        
+
+      </form>
           
 
 

@@ -10,7 +10,7 @@ form{
     border-radius: 5vh;
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 .form-control-1{
@@ -23,9 +23,9 @@ border-radius: 1.25rem;
   position: sticky;
   top: .3125rem;
   margin-left: .5rem;
-}
+} 
 
-
+/* 
 #btn-ad{
     justify-content: center;
     background-color: #80C5F6;
@@ -33,40 +33,55 @@ border-radius: 1.25rem;
     border-style: none;
     width: 15vw;
     margin: 20px auto;
-}
+} */
 
-#btn-ad:hover{
+/* #btn-ad:hover{
 color: white;
 background-color: #80C5F6;
-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); */
 
-}
+/* }
 .container-form{
     display: flex;
     justify-content: center;
     background-color: #a7d3f2;
 
     
-}
-
+} */
+/* 
 .form-control{
     width: 50vw;
     display: flex;
 
-}
+} */
 
-
+/* 
 #input-description{
 height: 20vh;
-}
+} */
 
 
 
-@media (max-width: 600px){
+ @media (max-width: 600px){
 .form-control{
     width: 40vw;
     display: flex;
 
 }
 
+} 
+
+.row {
+    width: 50vw;
+    display: flex;
+
 }
+
+.div1 { margin: 30px;}
+
+.div2 { margin: 30px;}  
+
+.div3 { margin: 30px;} 
+
+
+
