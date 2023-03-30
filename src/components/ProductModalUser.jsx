@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 import {BsCart3} from 'react-icons/bs';
 import Button from "react-bootstrap/Button";
 import './styleSheet/ProductModalUser.css'
+import { Link } from 'react-router-dom';
 
 
 const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
@@ -47,7 +48,10 @@ const ProductModalUser = ({ show, handleClose, product }) => {
                               </tbody>
                             </Table>
                             <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}> 
-                            <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button> </div> 
+                            <Link to={`/Cart`}>
+                            <Button variant="light" onClick={() => addToCart(product)}><BsCart3/> Add to cart </Button>
+                            </Link>
+                            </div> 
                   </div>
         </Modal.Body>
       </Modal>)

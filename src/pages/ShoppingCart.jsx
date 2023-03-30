@@ -4,12 +4,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../pages/styleSheetPages/ShoppingCart.css'
 import Navbar from '../components/Navbar';
-import { BsSearchHeart,  BsTrash, BsX } from 'react-icons/bs';
+import { BsTrash, } from 'react-icons/bs';
 import visa from '../assets/visa.png';
 import paypal from '../assets/paypal.jpg';
 import mastercard from '../assets/mastercard.png';
 import gpay from '../assets/Gpay.jpg';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, } from 'react-bootstrap';
 
 const Cart = () => {
     
@@ -35,7 +35,8 @@ return (
     <>
     <Navbar/>  
 <div className="container-gn" id="text">
-<h1>Your Shopping Cart</h1><Button className="remove" onClick={() => removeCartProducts()}>Empty Cart</Button>
+<h1>Your Shopping Cart</h1>
+<Button className="remove" style={{backgroundColor: "#CB5F5F",}} onClick={() => removeCartProducts()}>Empty Cart</Button>
 
 <br />
 
@@ -66,7 +67,7 @@ return (
         <br />
         </div>
         <Card.Title style={{marginBottom: '15px', marginTop: '20px', backgroundColor: '#D6C6B4'}} >You can pay with:</Card.Title>
-        <br />
+        
             <Row  >
                 <Col ><img src={visa} alt="visa"  style={{height: 60, marginTop: '10px'}}/></Col>
                 <Col ><img src={paypal} alt="paypal" style={{height: 60, marginTop: '12px'}}/></Col>
