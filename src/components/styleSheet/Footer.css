@@ -1,0 +1,9 @@
+.text-reset:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.footer-style {
+    display: flex;
+    justify-content: center;
+}

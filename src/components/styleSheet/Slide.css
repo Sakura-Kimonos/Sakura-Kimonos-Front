@@ -1,7 +1,21 @@
-/* .slide{
+.carousel {
+    height: auto;
+  
+  }
+
+.slide{
     display: flex;
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    
 }
+.position {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
 
 @media (max-width: 414px) {
     .slide{
@@ -12,5 +26,5 @@
   @media (max-width: 375px) {
     .slide{
         margin-top: 0;
-    }
-  } */
+    } 
+   }
