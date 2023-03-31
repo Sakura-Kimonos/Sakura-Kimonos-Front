@@ -28,7 +28,7 @@ const Cart = () => {
     };
 
     const totalPrice = cartProducts.reduce((total, product) => {
-        return total + product.price;
+        return total + product.producItem.price;
         }, 0);
 
         async function getProducts() {
